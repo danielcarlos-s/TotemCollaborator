@@ -8,7 +8,7 @@ export class ServicesList {
   }
 
   createServiceListItem(service) {
-    const popularBadge = service.popular ? '<span class="badge bg-success ms-2">Popular</span>' : '';
+    const popularBadge = service.popular ? '<span class="badge bg-success ms-2">Popular</span>' : ''; //  badge para serviços populares
     
     return `
       <div class="card service-card mb-3">

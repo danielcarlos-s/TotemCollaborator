@@ -2,7 +2,7 @@
 // Arquivo principal da aplicação
 import { Clock } from './modules/clock.js';
 // import { ServiceDetail } from './modules/serviceDetail.js';
-// import { ServicesList } from './modules/servicesList.js';
+import { ServicesList } from './modules/servicesList.js';
 
 class App {
   constructor() {
@@ -25,12 +25,12 @@ class App {
       case 'index':
         this.initIndexPage();
         break;
-      case 'services':
+      case 'servicos':
         this.initServicesPage();
         break;
-      case 'service-detail':
-        this.initServiceDetailPage();
-        break;
+      // case 'service-detail':
+      //   this.initServiceDetailPage();
+      //   break;
     }
   }
 
@@ -45,11 +45,11 @@ class App {
     servicesList.init();
   }
 
-  initServiceDetailPage() {
-    console.log('Página de detalhes do serviço carregada');
-    const serviceDetail = new ServiceDetail();
-    serviceDetail.init();
-  }
+  // initServiceDetailPage() {
+  //   console.log('Página de detalhes do serviço carregada');
+  //   const serviceDetail = new ServiceDetail();
+  //   serviceDetail.init();
+  // }
 }
 
 // Inicializar aplicação quando DOM estiver carregado
