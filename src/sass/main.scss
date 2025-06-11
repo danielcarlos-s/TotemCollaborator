@@ -4,7 +4,7 @@
 @import 'utils/mixins'; // OK
 @import 'base/reset'; // OK
 @import 'base/typography'; // OK
-// @import 'layout/header'; // OK
+@import 'layout/header'; // OK
 // @import 'layout/footer'; // OK
 // @import 'layout/grid'; // OK
 @import 'components/clock'; // OK
