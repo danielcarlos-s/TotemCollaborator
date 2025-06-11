@@ -1,0 +1,50 @@
+
+// Reset básico
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: $gray-50;
+  color: $gray-900;
+  line-height: 1.6;
+}
+
+// Links
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Lists
+ul, ol {
+  list-style: none;
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Buttons
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+// Focus states
+*:focus {
+  outline: 2px solid $primary-blue;
+  outline-offset: 2px;
+}

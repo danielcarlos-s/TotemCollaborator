@@ -1,0 +1,159 @@
+
+.service-card {
+  @include card-base;
+  @include card-hover;
+  
+  .service-icon {
+    @include flex-center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: $border-radius-lg;
+    margin-right: $spacing-4;
+    transition: $transition-colors;
+  }
+  
+  .service-title {
+    font-size: $font-xl;
+    font-weight: 700;
+    color: $gray-800;
+    margin-bottom: $spacing-4;
+  }
+  
+  .service-description {
+    color: $gray-600;
+    margin-bottom: $spacing-4;
+  }
+  
+  .service-action {
+    @include flex-start;
+    color: $primary-blue;
+    font-weight: 500;
+    
+    i {
+      margin-left: $spacing-2;
+      transition: transform 0.2s ease;
+    }
+  }
+  
+  &:hover {
+    .service-action i {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.info-card {
+  @include card-base;
+  
+  .info-icon {
+    @include flex-center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin: 0 auto $spacing-3;
+  }
+  
+  .info-title {
+    font-weight: 700;
+    color: $gray-800;
+    margin-bottom: $spacing-2;
+  }
+  
+  .info-content {
+    color: $gray-600;
+  }
+}
+
+.document-card {
+  @include card-base;
+  @include card-hover;
+  
+  .document-header {
+    @include flex-between;
+    margin-bottom: $spacing-4;
+    
+    .document-info {
+      @include flex-start;
+      
+      i {
+        font-size: $font-2xl;
+        color: $primary-blue;
+        margin-right: $spacing-3;
+      }
+      
+      h3 {
+        font-size: $font-xl;
+        font-weight: 700;
+        color: $gray-800;
+        margin: 0;
+      }
+    }
+    
+    .document-price {
+      background-color: rgba($primary-blue, 0.1);
+      color: $primary-blue;
+      font-size: $font-sm;
+      font-weight: 500;
+      padding: $spacing-1 $spacing-3;
+      border-radius: 9999px;
+    }
+  }
+  
+  .document-description {
+    color: $gray-600;
+    margin-bottom: $spacing-4;
+  }
+  
+  .document-requirements {
+    margin-bottom: $spacing-4;
+    
+    h4 {
+      @include flex-start;
+      font-weight: 600;
+      color: $gray-800;
+      margin-bottom: $spacing-2;
+      
+      i {
+        color: #10b981;
+        margin-right: $spacing-2;
+      }
+    }
+    
+    ul {
+      margin-left: $spacing-6;
+      
+      li {
+        color: $gray-600;
+        font-size: $font-sm;
+        margin-bottom: $spacing-1;
+      }
+    }
+  }
+  
+  .document-footer {
+    @include flex-between;
+    padding-top: $spacing-4;
+    border-top: 1px solid $gray-200;
+    
+    .document-deadline {
+      @include flex-start;
+      color: $gray-600;
+      
+      i {
+        margin-right: $spacing-2;
+      }
+      
+      span {
+        font-size: $font-sm;
+      }
+    }
+    
+    .document-button {
+      @include button-primary;
+      
+      i {
+        margin-right: $spacing-2;
+      }
+    }
+  }
+}

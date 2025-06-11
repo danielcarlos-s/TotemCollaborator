@@ -1,0 +1,92 @@
+
+// Flexbox mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+// Button mixins
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  padding: $spacing-2 $spacing-4;
+  border-radius: $border-radius-lg;
+  font-weight: 500;
+  transition: $transition-colors;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+@mixin button-primary {
+  @include button-base;
+  background-color: $primary-blue;
+  color: white;
+  
+  &:hover {
+    background-color: darken($primary-blue, 10%);
+  }
+}
+
+// Card mixins
+@mixin card-base {
+  background: white;
+  border-radius: $border-radius-xl;
+  box-shadow: $shadow-lg;
+  padding: $spacing-6;
+  transition: $transition-all;
+}
+
+@mixin card-hover {
+  &:hover {
+    box-shadow: $shadow-xl;
+    transform: translateY(-2px);
+  }
+}
+
+// Responsive mixins
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 769px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
+
+// Grid mixins
+@mixin grid-responsive($cols-mobile: 1, $cols-tablet: 2, $cols-desktop: 3) {
+  display: grid;
+  gap: $spacing-6;
+  grid-template-columns: repeat($cols-mobile, 1fr);
+  
+  @include tablet {
+    grid-template-columns: repeat($cols-tablet, 1fr);
+  }
+  
+  @include desktop {
+    grid-template-columns: repeat($cols-desktop, 1fr);
+  }
+}

@@ -1,0 +1,79 @@
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: $spacing-4;
+}
+
+h1 {
+  font-size: $font-4xl;
+  color: $gray-800;
+  margin-bottom: calc($spacing-1 * 4);
+  font-weight: 700;
+  
+  @include mobile {
+    font-size: $font-3xl;
+  }
+  
+}
+
+h2 {
+  font-size: $font-2xl;
+  
+  @include mobile {
+    font-size: $font-xl;
+  }
+}
+
+h3 {
+  font-size: $font-2xl;
+  
+  @include mobile {
+    font-size: $font-xl;
+  }
+}
+
+h4 {
+  font-size: $font-xl;
+}
+
+h5 {
+  font-size: $font-lg;
+}
+
+h6 {
+  font-size: $font-base;
+}
+
+// Paragraphs
+p {
+  font-size: $font-lg;
+  margin-bottom: $spacing-4;
+  color: $gray-600;
+}
+
+// Text utilities
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-normal {
+  font-weight: 400;
+}
