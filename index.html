@@ -1,30 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal de Serviços - Prefeitura Municipal</title>
-    <meta name="description" content="Portal de Serviços Públicos da Prefeitura Municipal - Acesse todos os serviços de forma rápida e fácil">
+    <meta name="description"
+        content="Portal de Serviços Públicos da Prefeitura Municipal - Acesse todos os serviços de forma rápida e fácil">
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- FontAwesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/src/css/main.min.css">
 </head>
+
 <body class="min-h-screen">
     <!-- Header -->
     <header class="header-main">
         <!-- incomplete new class -->
-        <div class="container mx-auto px-4 py-6"> 
+        <div class="container mx-auto px-4 py-6">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
                     <!-- Logo -->
@@ -41,13 +37,13 @@
                     </div>
                 </div>
                 <!-- <div class="header-content"> -->
-                  <div class="header-time">
+                <div class="header-time">
                     <div class="time-display">
-                      <i class="fas fa-clock"></i>
-                      <span id="current-time">00:00</span>
+                        <i class="fas fa-clock"></i>
+                        <span id="current-time">00:00</span>
                     </div>
                     <p id="current-date">Carregando...</p>
-                  </div>
+                </div>
                 <!-- </div> -->
             </div>
         </div>
@@ -61,154 +57,144 @@
                 Bem-vindo ao Portal de Serviços
             </h2>
             <p>
-                Acesse todos os serviços da prefeitura de forma rápida e fácil. 
+                Acesse todos os serviços da prefeitura de forma rápida e fácil.
                 Selecione o serviço desejado nos cartões abaixo.
             </p>
         </div>
 
-        <!-- Services Grid -->
-         <!-- last edit 11/06/2025 -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            
-
-            <div id="home-services" class="services-list">
-            <!-- Os serviços serão carregados via JavaScript -->
-          </div>
-
-          <div id="services-list" class="services-list">
-            <!-- Os serviços serão carregados via JavaScript -->
-          </div>
-
-            <!-- Documentos -->
-            <a href="documentos.html" class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 group">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-600 transition-colors">
+        <!-- Services Grid (unofficial) -->
+        <div class="gridCardsMainPage">
+            <!-- Card 00 -->
+            <a href="documentos.html" class="service-card group">
+                <div class="service-iconAndTitle">
+                    <div class="espacoDoIcone_CardsMainPage group-hover:bg-blue-600 transition-colors">
                         <i class="fas fa-file-alt text-white text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800">Documentos</h3>
+                    <h3 class="service-title">Documentos</h3>
                 </div>
-                <p>Emissão de certidões de nascimento, casamento, óbito e outros documentos oficiais</p>
-                <div class="flex items-center text-blue-600 font-medium">
+                <p class="service-description">Emissão de certidões de nascimento, casamento, óbito e outros documentos
+                    oficiais</p>
+                <div class="service-action">
                     <span>Acessar serviço</span>
                     <i class="fas fa-arrow-right ml-2"></i>
                 </div>
             </a>
-
-            <!-- Agendamentos -->
-            <a href="agendamentos.html" class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 group">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4 group-hover:bg-green-600 transition-colors">
-                        <i class="fas fa-calendar-alt text-white text-xl"></i>
+            <!-- Card 00 -->
+            <a href="documentos.html" class="service-card group">
+                <div class="service-iconAndTitle">
+                    <div class="espacoDoIcone_CardsMainPage group-hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-file-alt text-white text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800">Agendamentos</h3>
+                    <h3 class="service-title">Documentos</h3>
                 </div>
-                <p>Agende atendimentos presenciais e consultas em diversos departamentos</p>
-                <div class="flex items-center text-green-600 font-medium">
+                <p class="service-description">Emissão de certidões de nascimento, casamento, óbito e outros documentos
+                    oficiais</p>
+                <div class="service-action">
                     <span>Acessar serviço</span>
                     <i class="fas fa-arrow-right ml-2"></i>
                 </div>
             </a>
-
-            <!-- IPTU -->
-            <a href="iptu.html" class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 group">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center mr-4 group-hover:bg-yellow-600 transition-colors">
-                        <i class="fas fa-home text-white text-xl"></i>
+            <!-- Card 00 -->
+            <a href="documentos.html" class="service-card group">
+                <div class="service-iconAndTitle">
+                    <div class="espacoDoIcone_CardsMainPage group-hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-file-alt text-white text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800">IPTU</h3>
+                    <h3 class="service-title">Documentos</h3>
                 </div>
-                <p>Consulte e emita guias de IPTU, negocie débitos e acompanhe seus impostos</p>
-                <div class="flex items-center text-yellow-600 font-medium">
+                <p class="service-description">Emissão de certidões de nascimento, casamento, óbito e outros documentos
+                    oficiais</p>
+                <div class="service-action">
                     <span>Acessar serviço</span>
                     <i class="fas fa-arrow-right ml-2"></i>
                 </div>
             </a>
-
-            <!-- Licenciamento -->
-            <a href="licenciamento.html" class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 group">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4 group-hover:bg-purple-600 transition-colors">
-                        <i class="fas fa-car text-white text-xl"></i>
+            <!-- Card 00 -->
+            <a href="documentos.html" class="service-card group">
+                <div class="service-iconAndTitle">
+                    <div class="espacoDoIcone_CardsMainPage group-hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-file-alt text-white text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800">Licenciamento</h3>
+                    <h3 class="service-title">Documentos</h3>
                 </div>
-                <p>Solicite alvarás de funcionamento, licenças ambientais e sanitárias</p>
-                <div class="flex items-center text-purple-600 font-medium">
+                <p class="service-description">Emissão de certidões de nascimento, casamento, óbito e outros documentos
+                    oficiais</p>
+                <div class="service-action">
                     <span>Acessar serviço</span>
                     <i class="fas fa-arrow-right ml-2"></i>
                 </div>
             </a>
-
-            <!-- Obras e Posturas -->
-            <a href="obras.html" class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 group">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mr-4 group-hover:bg-orange-600 transition-colors">
-                        <i class="fas fa-hard-hat text-white text-xl"></i>
+            <!-- Card 00 -->
+            <a href="documentos.html" class="service-card group">
+                <div class="service-iconAndTitle">
+                    <div class="espacoDoIcone_CardsMainPage group-hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-file-alt text-white text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800">Obras e Posturas</h3>
+                    <h3 class="service-title">Documentos</h3>
                 </div>
-                <p>Aprovação de projetos, habite-se e fiscalizações de obras</p>
-                <div class="flex items-center text-orange-600 font-medium">
+                <p class="service-description">Emissão de certidões de nascimento, casamento, óbito e outros documentos
+                    oficiais</p>
+                <div class="service-action">
                     <span>Acessar serviço</span>
                     <i class="fas fa-arrow-right ml-2"></i>
                 </div>
             </a>
-
-            <!-- Saúde -->
-            <a href="saude.html" class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 group">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mr-4 group-hover:bg-red-600 transition-colors">
-                        <i class="fas fa-heartbeat text-white text-xl"></i>
+            <!-- Card 00 -->
+            <a href="documentos.html" class="service-card group">
+                <div class="service-iconAndTitle">
+                    <div class="espacoDoIcone_CardsMainPage group-hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-file-alt text-white text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800">Saúde</h3>
+                    <h3 class="service-title">Documentos</h3>
                 </div>
-                <p>Agendamento de consultas, exames e acompanhamento de tratamentos</p>
-                <div class="flex items-center text-red-600 font-medium">
+                <p class="service-description">Emissão de certidões de nascimento, casamento, óbito e outros documentos
+                    oficiais</p>
+                <div class="service-action">
                     <span>Acessar serviço</span>
                     <i class="fas fa-arrow-right ml-2"></i>
                 </div>
             </a>
-
-            <!-- Educação -->
-            <a href="educacao.html" class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 group">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center mr-4 group-hover:bg-indigo-600 transition-colors">
-                        <i class="fas fa-graduation-cap text-white text-xl"></i>
+            <!-- Card 00 -->
+            <a href="documentos.html" class="service-card group">
+                <div class="service-iconAndTitle">
+                    <div class="espacoDoIcone_CardsMainPage group-hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-file-alt text-white text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800">Educação</h3>
+                    <h3 class="service-title">Documentos</h3>
                 </div>
-                <p>Matrículas escolares, transporte escolar e programas educacionais</p>
-                <div class="flex items-center text-indigo-600 font-medium">
+                <p class="service-description">Emissão de certidões de nascimento, casamento, óbito e outros documentos
+                    oficiais</p>
+                <div class="service-action">
                     <span>Acessar serviço</span>
                     <i class="fas fa-arrow-right ml-2"></i>
                 </div>
             </a>
-
-            <!-- Trabalho -->
-            <a href="trabalho.html" class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 group">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-teal-500 rounded-lg flex items-center justify-center mr-4 group-hover:bg-teal-600 transition-colors">
-                        <i class="fas fa-briefcase text-white text-xl"></i>
+            <!-- Card 00 -->
+            <a href="documentos.html" class="service-card group">
+                <div class="service-iconAndTitle">
+                    <div class="espacoDoIcone_CardsMainPage group-hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-file-alt text-white text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800">Trabalho</h3>
+                    <h3 class="service-title">Documentos</h3>
                 </div>
-                <p>Vagas de emprego, cursos profissionalizantes e programas sociais</p>
-                <div class="flex items-center text-teal-600 font-medium">
+                <p class="service-description">Emissão de certidões de nascimento, casamento, óbito e outros documentos
+                    oficiais</p>
+                <div class="service-action">
                     <span>Acessar serviço</span>
                     <i class="fas fa-arrow-right ml-2"></i>
                 </div>
             </a>
-
-            <!-- INSS -->
-            <a href="inss.html" class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 group">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4 group-hover:bg-pink-600 transition-colors">
-                        <i class="fas fa-id-card text-white text-xl"></i>
+            <!-- Card 00 -->
+            <a href="documentos.html" class="service-card group">
+                <div class="service-iconAndTitle">
+                    <div class="espacoDoIcone_CardsMainPage group-hover:bg-blue-600 transition-colors">
+                        <i class="fas fa-file-alt text-white text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800">INSS</h3>
+                    <h3 class="service-title">Documentos</h3>
                 </div>
-                <p>Aposentadorias, benefícios previdenciários e orientações sobre direitos</p>
-                <div class="flex items-center text-pink-600 font-medium">
+                <p class="service-description">Emissão de certidões de nascimento, casamento, óbito e outros documentos
+                    oficiais</p>
+                <div class="service-action">
                     <span>Acessar serviço</span>
                     <i class="fas fa-arrow-right ml-2"></i>
                 </div>
@@ -216,42 +202,42 @@
         </div>
 
         <!-- Contact Information -->
-        <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Informações de Contato</h3>
+        <div class="info-card p-8 mb-8">
+            <h3 class="info-title">Informações de Contato</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Atendimento Geral -->
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <div class="info-icon bg-blue-100">
                         <i class="fas fa-phone text-blue-600 text-xl"></i>
                     </div>
-                    <h4 class="font-bold text-gray-800 mb-2">Atendimento Geral</h4>
+                    <h4 class="info-title2">Atendimento Geral</h4>
                     <p>(11) 1234-5678</p>
                 </div>
 
                 <!-- Ouvidoria -->
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <div class="info-icon bg-green-100">
                         <i class="fas fa-comments text-green-600 text-xl"></i>
                     </div>
-                    <h4 class="font-bold text-gray-800 mb-2">Ouvidoria</h4>
+                    <h4 class="info-title2">Ouvidoria</h4>
                     <p>(11) 1234-5679</p>
                 </div>
 
                 <!-- Emergência -->
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <div class="info-icon bg-red-100">
                         <i class="fas fa-exclamation-triangle text-red-600 text-xl"></i>
                     </div>
-                    <h4 class="font-bold text-gray-800 mb-2">Emergência</h4>
+                    <h4 class="info-title2">Emergência</h4>
                     <p>193 / 192 / 190</p>
                 </div>
 
                 <!-- WhatsApp -->
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <div class="info-icon bg-green-100">
                         <i class="fab fa-whatsapp text-green-600 text-xl"></i>
                     </div>
-                    <h4 class="font-bold text-gray-800 mb-2">WhatsApp</h4>
+                    <h4 class="info-title2">WhatsApp</h4>
                     <p>(11) 9 9999-9999</p>
                 </div>
             </div>
@@ -259,22 +245,23 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6">
-        <div class="container mx-auto px-4">
+    <footer>
+        <div class="footer-container">
             <div class="text-center">
-                <p>
+                <p class="footer-main">
                     © 2024 Prefeitura Municipal. Todos os direitos reservados.
                 </p>
-                <p>
+                <p class="footer-sub">
                     Portal de Serviços Públicos - Facilitando o acesso aos serviços municipais
                 </p>
             </div>
         </div>
     </footer>
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- JS  -->
-<script type="module" src="./src/js/app.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS  -->
+    <script type="module" src="./src/js/app.js"></script>
 
 </body>
+
 </html>

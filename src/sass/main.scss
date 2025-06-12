@@ -10,10 +10,8 @@
 
 // LAYOUT
 @import 'layout/header'; // OK
-// @import 'layout/footer'; // OK
-// @import 'layout/grid'; // OK
-
-// COMPONENTS
+@import 'layout/footer'; // OK
+@import 'layout/grid'; // OK
 @import 'components/clock'; // OK
 @import 'components/icons'; // OK
 // @import 'components/buttons'; // OK

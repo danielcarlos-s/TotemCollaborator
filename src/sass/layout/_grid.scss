@@ -62,7 +62,7 @@
 
 
 
-
+// ------------------------------------------------------------------------
 
 
 
@@ -72,15 +72,26 @@
   gap: 6px;
   margin-bottom: 12px;
   display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-
-  // md
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
   // lg
   @media (max-width: 1024px) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  // md
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+}
+
+.espacoDoIcone_CardsMainPage {
+  width: 48px;
+  height: 48px;
+  background-color: $primary-blue;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
 }
