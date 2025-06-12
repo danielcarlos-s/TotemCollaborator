@@ -1,5 +1,7 @@
 
 // Módulo para gerenciamento de serviços
+//-----------------------------------------------------------------------//
+
 export class ServicesManager {
   constructor() {
     this.servicesData = this.getServicesData();
@@ -13,7 +15,7 @@ export class ServicesManager {
         description: "Marque suas consultas médicas de forma rápida e fácil.",
         icon: "fa fa-calendar", // icone da família de fontes
         iconClass: "icon-blue", // classe CSS para estilização do ícone
-        popular: true,
+        popular: false,
         requirements: ["Documento de identidade", "Cartão do SUS"],
         steps: ["Acesse o sistema online", "Selecione a especialidade", "Escolha o horário", "Confirme o agendamento"],
         forms: [
@@ -27,7 +29,7 @@ export class ServicesManager {
         description: "Emita a segunda via do seu IPTU e mantenha seus pagamentos em dia.",
         icon: "fas fa-barcode",
         iconClass: "icon-green",
-        popular: true,
+        popular: false,
         requirements: ["Número de inscrição do imóvel", "CPF do proprietário"],
         steps: ["Acesse o portal do IPTU", "Informe o número de inscrição", "Visualize o débito", "Imprima a segunda via"],
         forms: [
@@ -40,7 +42,7 @@ export class ServicesManager {
         description: "Inscreva-se no Cadastro Único para programas sociais do governo.",
         icon: "fas fa-address-card",
         iconClass: "icon-orange",
-        popular: true,
+        popular: false,
         requirements: ["Documento de identidade", "Comprovante de residência", "Comprovante de renda"],
         steps: ["Agende seu atendimento", "Compareça ao CRAS", "Apresente os documentos", "Aguarde a análise"],
         forms: [
@@ -54,7 +56,7 @@ export class ServicesManager {
         description: "Solicite sua segunda via do RG através do site oficial do Poupatempo.",
         icon: "fas fa-id-card",
         iconClass: "icon-purple",
-        popular: true,
+        popular: false,
         requirements: ["Certidão de nascimento ou casamento", "Comprovante de residência", "CPF"],
         steps: ["Acesse o site do Poupatempo", "Faça o agendamento online", "Pague a taxa", "Compareça no local agendado"],
         forms: [
@@ -78,8 +80,8 @@ export class ServicesManager {
         id: 6,
         name: "Certidão Negativa de Débitos",
         description: "Emita certidão negativa de débitos municipais.",
-        icon: "fas fa-file-invoice",
-        iconClass: "icon-cyan",
+        icon: "fas fa-file-lines",
+        iconClass: "icon-indigo",
         popular: false,
         requirements: ["CPF ou CNPJ", "Número de inscrição municipal"],
         steps: ["Acesse o portal online", "Informe os dados", "Verifique débitos", "Imprima a certidão"],

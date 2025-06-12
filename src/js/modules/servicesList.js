@@ -1,4 +1,6 @@
 // Módulo para lista de serviços
+//-----------------------------------------------------------------------//
+
 import { ServicesManager } from "./services.js";
 
 export class ServicesList {

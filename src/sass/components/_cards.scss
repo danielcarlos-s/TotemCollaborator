@@ -1,7 +1,8 @@
 .service-list {
   @include card-base;
   @include card-hover;
-  margin-bottom: $spacing-4;
+  // margin-bottom: $spacing-4;
+  cursor: pointer;
 
   &:hover {
     box-shadow: $shadow-xl;
