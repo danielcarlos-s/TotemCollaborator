@@ -4,13 +4,23 @@
 @import 'utils/mixins'; // OK
 @import 'base/reset'; // OK
 @import 'base/typography'; // OK
+
+// Importa os icones do Phosphor Icons
+@import "/node_modules/@phosphor-icons/web/src/Style.css";
+
+// LAYOUT
 @import 'layout/header'; // OK
 // @import 'layout/footer'; // OK
 // @import 'layout/grid'; // OK
+
+// COMPONENTS
 @import 'components/clock'; // OK
+@import 'components/icons'; // OK
 // @import 'components/buttons'; // OK
-// @import 'components/cards'; // OK
+@import 'components/cards'; // OK
 // @import 'components/forms';
+
+// PAGES
 // @import 'pages/home';
 // @import 'pages/services';
 // @import 'themes/colors';

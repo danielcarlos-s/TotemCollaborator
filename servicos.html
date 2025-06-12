@@ -1,151 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todos os Serviços - Prefeitura em Foco</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/style.css">
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <!-- CSS principal compilado -->
     <!-- <link rel="stylesheet" href="./src/css/style.css" />  -->
     <link rel="stylesheet" href="./src/css/main.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Header -->
     <header class="header-main">
-        <div class="container">
-            <div class="header-content">
-                <div class="header-info">
-                    <a href="index.html" class="back-btn">
-                        <i class="fas fa-arrow-left"></i>
-                    </a>
-                    <div class="header-icon">
-                        <i class="fas fa-list"></i>
-                    </div>
-                    <div class="header-text">
-                        <h1>Todos os Serviços</h1>
-                        <p>Prefeitura Municipal</p>
-                    </div>
-                </div>
-                <div class="header-time">
-                    <div class="time-display">
-                        <i class="fas fa-clock"></i>
-                        <span id="current-time">00:00</span>
-                    </div>
-                    <p id="current-date">Carregando...</p>
-                </div>
+      <div class="container">
+        <div class="header-content">
+          <div class="header-info">
+            <a href="index.html" class="back-btn">
+              <i class="fas fa-arrow-left"></i>
+            </a>
+            <div class="header-icon">
+              <i class="fas fa-list"></i>
             </div>
+            <div class="header-text">
+              <h1>Todos os Serviços</h1>
+              <p>Prefeitura Municipal</p>
+            </div>
+          </div>
+          <div class="header-time">
+            <div class="time-display">
+              <i class="fas fa-clock"></i>
+              <span id="current-time">00:00</span>
+            </div>
+            <p id="current-date">Carregando...</p>
+          </div>
         </div>
+      </div>
     </header>
 
     <!-- Main Content -->
     <main class="main-content">
-        <div class="container">
-            <section class="services-section">
-                <div class="section-header">
-                    <h2>Lista Completa de Serviços</h2>
-                    <p>Encontre todos os serviços disponibilizados pela prefeitura</p>
-                </div>
+      <div class="container">
+        <section class="services-section">
+          <div class="section-header">
+            <h2>Lista Completa de Serviços</h2>
+            <p>Encontre todos os serviços disponibilizados pela prefeitura</p>
+          </div>
 
-                <div class="services-list">
-                    <div class="card service-card mb-3">
-                        <div class="card-body">
-                            <div class="row align-items-center">
-                                <div class="col-auto">
-                                    <div class="rounded-circle d-flex align-items-center justify-content-center fas fa-calendar-alt icon-blue"
-                                        style="width: 64px; height: 64px">
-                                        <i class="${service.icon}" style="font-size: 2rem"></i>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <h5 class="card-title mb-1 d-flex align-items-center">
-                                        Agendamento de Consultas
-                                        <span class="badge bg-success ms-2">Popular</span>
-                                    </h5>
-                                    <p class="card-text text-muted mb-0">
-                                        Marque suas consultas médicas de forma rápida e fácil.
-                                    </p>
-                                </div>
-                                <div class="col-auto">
-                                    <a href="service-detail.html?id=${service.id}" class="btn btn-outline-primary">
-                                        Ver Detalhes <i class="fas fa-chevron-right ms-1"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CARD Documentos da home -->
-                <div class="grid grid-cols-12 md:grid-cols-2 lg:grid-cols-1 gap-6 mb-12">
-                    <!-- Documentos -->
-                    <a href="documentos.html"
-                        class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 group">
-                        <div class="flex items-start mb-4">
-                            <div
-                                class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-600 transition-colors">
-                                <i class="fas fa-file-alt text-white text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800">
-                                Agendamento de Consultas
-                            </h3>
-                            <p>Marque suas consultas médicas de forma rápida e Fácil.</p>
-                        </div>
-                        <div class="flex items-center text-blue-600 font-medium">
-                            <!-- <span>Acessar serviço</span> -->
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card-list">
-                <a href="documentos.html"
-                        class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 group">
-                        <div class="flex items-start mb-4">
-                            <div
-                                class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-600 transition-colors">
-                                <i class="fas fa-file-alt text-white text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800">
-                                Agendamento de Consultas
-                            </h3>
-                            <p>Marque suas consultas médicas de forma rápida e Fácil.</p>
-                        </div>
-                        <div class="flex items-center text-blue-600 font-medium">
-                            <!-- <span>Acessar serviço</span> -->
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </div>
-                    </a>
-                    </divclass=>
-
-                <div id="services-list" class="services-list">
-                    
-                    <!-- Os serviços serão carregados via JavaScript -->
-                </div>
-            </section>
-        </div>
+          <div id="services-list" class="services-list">
+            <!-- Os serviços serão carregados via JavaScript -->
+          </div>
+        </section>
+      </div>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-copyright">
-                <p>&copy; 2024 Prefeitura Municipal. Todos os direitos reservados.</p>
-            </div>
+      <div class="container">
+        <div class="footer-copyright">
+          <p>&copy; 2024 Prefeitura Municipal. Todos os direitos reservados.</p>
         </div>
+      </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Script principal -->
     <script type="module" src="./src/js/app.js"></script>
-</body>
-
+  </body>
 </html>
