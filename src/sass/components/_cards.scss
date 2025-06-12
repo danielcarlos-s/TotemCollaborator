@@ -11,12 +11,20 @@
     margin-right: $spacing-4;
     transition: $transition-colors;
   }
+
+  .service-iconAndTitle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    gap: 3px;
+  }
   
   .service-title {
     font-size: $font-xl;
     font-weight: 700;
     color: $gray-800;
     margin-bottom: $spacing-4;
+    line-height: calc(1.75 / 1.25);
   }
   
   .service-description {
@@ -42,6 +50,8 @@
   }
 }
 
+// --------------------------------------
+
 .info-card {
   @include card-base;
   
@@ -54,6 +64,15 @@
   }
   
   .info-title {
+    font-size: 1.5rem;
+    line-height: calc(2 / 1.5);
+    font-weight: 700;
+    color: $gray-800;
+    margin-bottom: $spacing-2;
+    text-align: center;
+  }
+
+  .info-title2 {
     font-weight: 700;
     color: $gray-800;
     margin-bottom: $spacing-2;
@@ -63,6 +82,8 @@
     color: $gray-600;
   }
 }
+
+// --------------------------------------
 
 .document-card {
   @include card-base;
