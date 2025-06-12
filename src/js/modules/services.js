@@ -11,7 +11,7 @@ export class ServicesManager {
         id: 1,
         name: "Agendamento de Consultas",
         description: "Marque suas consultas médicas de forma rápida e fácil.",
-        icon: "ph ph-calendar-dots", // icone da família de fontes
+        icon: "fa fa-calendar", // icone da família de fontes
         iconClass: "icon-blue", // classe CSS para estilização do ícone
         popular: true,
         requirements: ["Documento de identidade", "Cartão do SUS"],
