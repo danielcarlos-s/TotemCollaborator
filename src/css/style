@@ -13648,7 +13648,7 @@ button, .btn, a[role=button] {
   margin: 2rem;
 }
 
-.flex-center {
+.flexrow-center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

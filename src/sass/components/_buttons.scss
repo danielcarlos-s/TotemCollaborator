@@ -54,7 +54,7 @@
 }
 
 .back-button {
-  @include flex-center;
+  @include flexrow-center;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: $border-radius-lg;

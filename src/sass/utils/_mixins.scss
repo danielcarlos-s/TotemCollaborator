@@ -1,31 +1,61 @@
+// # Flexbox mixins
 
-// Flexbox mixins
-
-@mixin flex-content-left {
+@mixin flexrow {
   display: flex;
-  flex-flow: column nowrap;
-  align-items: start;
-  justify-content: space-between;
-
+  flex-flow: row nowrap;
 }
 
-@mixin flex-center {
+@mixin flexcolumn {
   display: flex;
+  flex-flow: column nowrap;
+}
+
+// ## flexbox mixins
+// ### flexbox row
+@mixin flexrow-start {
+  @include flexrow;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@mixin flexrow-center {
+  @include flexrow;
   align-items: center;
   justify-content: center;
 }
 
-@mixin flex-between {
-  display: flex;
+@mixin flexrow-between {
+  @include flexrow;
   align-items: center;
   justify-content: space-between;
 }
 
-@mixin flex-start {
-  display: flex;
+// ### flexbox column
+@mixin flexcolumn-start {
+  @include flexcolumn;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: start;
 }
+
+@mixin flexcolumn-center {
+  @include flexcolumn;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexcolumn-between {
+  @include flexcolumn;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flexcolumn-between-start {
+  @include flexcolumn-between;
+  align-items: start;
+}
+
+
+// -------------------------------------------------------------------
 
 // Button mixins
 @mixin button-base {
@@ -44,7 +74,7 @@
   @include button-base;
   background-color: $primary-blue;
   color: white;
-  
+
   &:hover {
     background-color: darken($primary-blue, 10%);
   }
@@ -90,11 +120,11 @@
   display: grid;
   gap: $spacing-6;
   grid-template-columns: repeat($cols-mobile, 1fr);
-  
+
   @include tablet {
     grid-template-columns: repeat($cols-tablet, 1fr);
   }
-  
+
   @include desktop {
     grid-template-columns: repeat($cols-desktop, 1fr);
   }
