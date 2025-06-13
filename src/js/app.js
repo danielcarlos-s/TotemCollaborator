@@ -1,8 +1,7 @@
-
 // Arquivo principal da aplicação
-import { Clock } from './modules/clock.js';
-// import { ServiceDetail } from './modules/serviceDetail.js';
-// import { ServicesList } from './modules/servicesList.js';
+import { Clock } from "./modules/clock.js";
+import { HomeServicesList } from "./modules/homeServicesList.js";
+import { ServicesList } from "./modules/servicesList.js";
 
 class App {
   constructor() {
@@ -12,8 +11,8 @@ class App {
 
   getCurrentPage() {
     const path = window.location.pathname;
-    const filename = path.split('/').pop() || 'index.html';
-    return filename.replace('.html', '') || 'index';
+    const filename = path.split("/").pop() || "index.html";
+    return filename.replace(".html", "") || "index";
   }
 
   init() {
@@ -22,38 +21,38 @@ class App {
 
     // Inicializar funcionalidades específicas por página
     switch (this.currentPage) {
-      case 'index':
+      case "index":
         this.initIndexPage();
         break;
-      case 'services':
+      case "servicos":
         this.initServicesPage();
         break;
-      case 'service-detail':
-        this.initServiceDetailPage();
-        break;
+      // case 'service-detail':
+      //   this.initServiceDetailPage();
+      //   break;
     }
   }
 
   initIndexPage() {
-    console.log('Página inicial carregada');
+    console.log("Página inicial carregada");
     // Funcionalidades específicas da página inicial podem ser adicionadas aqui
   }
 
   initServicesPage() {
-    console.log('Página de serviços carregada');
+    console.log("Página de serviços carregada");
     const servicesList = new ServicesList();
     servicesList.init();
   }
 
-  initServiceDetailPage() {
-    console.log('Página de detalhes do serviço carregada');
-    const serviceDetail = new ServiceDetail();
-    serviceDetail.init();
+  initIndexPage() {
+    console.log("Página inicial carregada");
+    const homeServices = new HomeServicesList();
+    homeServices.init();
   }
 }
 
 // Inicializar aplicação quando DOM estiver carregado
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   const app = new App();
   app.init();
 });

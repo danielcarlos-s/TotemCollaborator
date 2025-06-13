@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todos os Serviços - Prefeitura em Foco</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/style.css">
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- CSS principal compilado -->
+    <!-- <link rel="stylesheet" href="./src/css/style.css" />  -->
+    <link rel="stylesheet" href="./src/css/main.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header-main">
+      <div class="container">
+        <div class="header-content">
+          <div class="header-info">
+            <a href="index.html" class="back-btn">
+              <i class="fas fa-arrow-left"></i>
+            </a>
+            <div class="header-icon">
+              <i class="fas fa-list"></i>
+            </div>
+            <div class="header-text">
+              <h1>Todos os Serviços</h1>
+              <p>Prefeitura Municipal</p>
+            </div>
+          </div>
+          <div class="header-time">
+            <div class="time-display">
+              <i class="fas fa-clock"></i>
+              <span id="current-time">00:00</span>
+            </div>
+            <p id="current-date">Carregando...</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="container">
+        <section class="services-section">
+          <div class="section-header">
+            <h2>Lista Completa de Serviços</h2>
+            <p>Encontre todos os serviços disponibilizados pela prefeitura</p>
+          </div>
+
+          <div id="services-list" class="services-list">
+            <!-- Os serviços serão carregados via JavaScript -->
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-copyright">
+          <p>&copy; 2024 Prefeitura Municipal. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script principal -->
+    <script type="module" src="./src/js/app.js"></script>
+  </body>
+</html>

@@ -1,21 +1,21 @@
 
-// Módulo para gerenciamento de serviços
+// Módulo para gerenciamento de serviços da home
 //-----------------------------------------------------------------------//
 
-export class ServicesManager {
+export class HomeServicesManager {
   constructor() {
-    this.servicesData = this.getServicesData();
+    this.servicesData = this.getHomeServicesData();
   }
 
-  getServicesData() {
+  getHomeServicesData() {
     return [
       {
         id: 1,
-        name: "Agendamento de Consultas",
+        name: "IPTU 2025",
         description: "Marque suas consultas médicas de forma rápida e fácil.",
         icon: "fa fa-calendar", // icone da família de fontes
         iconClass: "icon-blue", // classe CSS para estilização do ícone
-        popular: false,
+        popular: true,
         requirements: ["Documento de identidade", "Cartão do SUS"],
         steps: ["Acesse o sistema online", "Selecione a especialidade", "Escolha o horário", "Confirme o agendamento"],
         forms: [
@@ -25,11 +25,11 @@ export class ServicesManager {
       },
       {
         id: 2,
-        name: "Emissão de IPTU",
+        name: "TAXAS e ISS Autônomo",
         description: "Emita a segunda via do seu IPTU e mantenha seus pagamentos em dia.",
         icon: "fas fa-barcode",
         iconClass: "icon-green",
-        popular: false,
+        popular: true,
         requirements: ["Número de inscrição do imóvel", "CPF do proprietário"],
         steps: ["Acesse o portal do IPTU", "Informe o número de inscrição", "Visualize o débito", "Imprima a segunda via"],
         forms: [
@@ -38,11 +38,11 @@ export class ServicesManager {
       },
       {
         id: 3,
-        name: "Cadastro Único",
+        name: "Solicitação On-line de Serviços",
         description: "Inscreva-se no Cadastro Único para programas sociais do governo.",
         icon: "fas fa-address-card",
         iconClass: "icon-orange",
-        popular: false,
+        popular: true,
         requirements: ["Documento de identidade", "Comprovante de residência", "Comprovante de renda"],
         steps: ["Agende seu atendimento", "Compareça ao CRAS", "Apresente os documentos", "Aguarde a análise"],
         forms: [
@@ -52,11 +52,11 @@ export class ServicesManager {
       },
       {
         id: 4,
-        name: "Segunda Via do RG",
+        name: "Agendar Atendimento Presencial",
         description: "Solicite sua segunda via do RG através do site oficial do Poupatempo.",
         icon: "fas fa-id-card",
         iconClass: "icon-purple",
-        popular: false,
+        popular: true,
         requirements: ["Certidão de nascimento ou casamento", "Comprovante de residência", "CPF"],
         steps: ["Acesse o site do Poupatempo", "Faça o agendamento online", "Pague a taxa", "Compareça no local agendado"],
         forms: [
@@ -90,15 +90,7 @@ export class ServicesManager {
     ];
   }
 
-  getServiceById(id) {
-    return this.servicesData.find(service => service.id === parseInt(id));
-  }
-
-  getPopularServices() {
-    return this.servicesData.filter(service => service.popular);
-  }
-
-  getAllServices() {
+  getAllHomeServices() {
     return this.servicesData;
   }
 }

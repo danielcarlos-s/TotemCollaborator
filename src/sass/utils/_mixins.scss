@@ -1,5 +1,14 @@
 
 // Flexbox mixins
+
+@mixin flex-content-left {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+  justify-content: space-between;
+
+}
+
 @mixin flex-center {
   display: flex;
   align-items: center;
