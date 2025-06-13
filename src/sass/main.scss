@@ -4,6 +4,7 @@
 @import 'utils/mixins'; // OK
 @import 'base/reset'; // OK
 @import 'base/typography'; // OK
+@import 'base/playground'; // SOMENTE PARA TESTES
 
 // Importa os icones do Phosphor Icons
 @import "/node_modules/@phosphor-icons/web/src/Style.css";
