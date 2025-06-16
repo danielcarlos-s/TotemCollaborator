@@ -1,31 +1,64 @@
+// # Flexbox mixins
+// ## base dos flexboxes -------------------
+@mixin flexrow {
+  display: flex;
+  flex-flow: row nowrap;
+}
 
-// Flexbox mixins
-
-@mixin flex-content-left {
+@mixin flexcolumn {
   display: flex;
   flex-flow: column nowrap;
-  align-items: start;
-  justify-content: space-between;
-
 }
 
-@mixin flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@mixin flex-between {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-@mixin flex-start {
-  display: flex;
-  align-items: center;
+// ## flexbox row -------------------
+@mixin flexrow-start {
+  @include flexrow;
   justify-content: flex-start;
+  align-items: center;
 }
+
+@mixin flexrow-center {
+  @include flexrow;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexrow-between {
+  @include flexrow;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// ## flexbox column -------------------
+@mixin flexcolumn-start {
+  @include flexcolumn;
+  justify-content: start;
+  align-items: center;
+}
+
+@mixin flexcolumn-start-start {
+  @include flexcolumn-start;
+  align-items: start;
+}
+
+@mixin flexcolumn-center {
+  @include flexcolumn;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexcolumn-between {
+  @include flexcolumn;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexcolumn-between-start {
+  @include flexcolumn-between;
+  align-items: start;
+}
+
+// -------------------------------------------------------------------
 
 // Button mixins
 @mixin button-base {
@@ -44,11 +77,13 @@
   @include button-base;
   background-color: $primary-blue;
   color: white;
-  
+
   &:hover {
     background-color: darken($primary-blue, 10%);
   }
 }
+
+// -------------------------------------------------------------------
 
 // Card mixins
 @mixin card-base {
@@ -65,6 +100,8 @@
     transform: translateY(-2px);
   }
 }
+
+// -------------------------------------------------------------------
 
 // Responsive mixins
 @mixin mobile {
@@ -85,16 +122,18 @@
   }
 }
 
+// -------------------------------------------------------------------
+
 // Grid mixins
 @mixin grid-responsive($cols-mobile: 1, $cols-tablet: 2, $cols-desktop: 3) {
   display: grid;
   gap: $spacing-6;
   grid-template-columns: repeat($cols-mobile, 1fr);
-  
+
   @include tablet {
     grid-template-columns: repeat($cols-tablet, 1fr);
   }
-  
+
   @include desktop {
     grid-template-columns: repeat($cols-desktop, 1fr);
   }

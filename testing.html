@@ -22,10 +22,41 @@
 
 
 
+    <!-- _grid Testing -->
+    <div style="display: none;">
+        <h1 style="text-align: center;">00</h1>
+        <div class="grid">
+            <div class="logo">1</div>
+            <div class="logo">2</div>
+        </div>
+        <h1 style="text-align: center;">01</h1>
+        <div class="grid grid-1">
+            <div class="logo">1</div>
+            <div class="logo">2</div>
+        </div>
+        <h1 style="text-align: center;">02</h1>
+        <div class="grid grid-2">
+            <div class="logo">1</div>
+            <div class="logo">2</div>
+            <div class="logo">3</div>
+            <div class="logo">4</div>
+        </div>
+        <h1 style="text-align: center;">03</h1>
+        <div class="grid grid-3">
+            <div class="logo">1</div>
+            <div class="logo">2</div>
+            <div class="logo">3</div>
+            <div class="logo">4</div>
+        </div>
+        <h1 style="text-align: center;">04</h1>
+        <div class="grid grid-4">
+            <div class="logo">1</div>
+            <div class="logo">2</div>
+            <div class="logo">3</div>
+            <div class="logo">4</div>
+        </div>
 
-
-
-
+    </div>
 
     <!-- Complete new classes -->
     <main class="container mx-auto px-4 py-8" style="display: none;">
@@ -128,11 +159,54 @@
 
 
     <!-- Testing -->
-    <main class="container mx-auto px-4 py-8">
+    <main class="container mx-auto px-4 py-8" style="display: block;">
         <!--  -->
 
 
+        <header class="header-main">
+            <div class="container mx-auto px-4 py-6">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center header-info" style="gap: 1rem;">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <!-- Ícone da Logo -->
+                            <i class="fas fa-landmark text-blue-600 text-3xl"></i>
+                        </div>
+                        <!-- Título -->
+                        <div class="text-left header-text">
+                            <h1>Portal de Serviços</h1>
+                            <p>Prefeitura Municipal</p>
+                        </div>
+                    </div>
+                    <div class="header-content header-info">
+                        <div class="header-time header-text">
+                            <div class="time-display">
+                                <i class="fas fa-clock"></i>
+                                <span id="current-time">00:00</span>
+                            </div>
+                            <p id="current-date">Carregando...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
 
+        <div class="help-card">
+            <div class="div_help-card">
+                <div class="texts_div_help-card">
+                    <div class="icon_texts_div_help-card">
+                        <i class="fas fa-question-circle text-yellow-600 text-xl"></i>
+                    </div>
+                    <div class="text_texts_div_help-card">
+                        <h3>Como usar este totem</h3>
+                        <p>Toque no card do serviço que você deseja acessar. Use gestos simples e aguardo o carregamento.</p>
+                    </div>
+                </div>
+                <div>
+                    <button class="button_div_help-card">Ver Todos os Serviços</button>
+                </div>
+            </div>
+        </div>
 
 
         <!--  -->

@@ -56,24 +56,28 @@
     }
 
     .header-text {
-      h1 {
-        font-size: $font-2xl;
+
+      h1,
+      span {
+        font-size: $font-3xl;
         font-weight: bold;
         margin: 0 0 0.25rem 0;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        // text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        color: white;
       }
 
       p {
         font-size: $font-lg;
         margin: 0;
         opacity: 0.9;
+        color: white;
       }
     }
   }
 
   .header-time {
     text-align: center;
-    background: rgba(255, 255, 255, 0.1);
+    // background: rgba(255, 255, 255, 0.1);
     border-radius: $border-radius;
     padding: 1rem 1.5rem;
     min-width: 200px;
@@ -105,14 +109,14 @@
 }
 
 .logo {
-  background-color: $primary-blue;
-  border-radius: $border-radius-lg;
+  background-color: white;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 4px;
-  width: calc($spacing-1 * 16);
-  height: calc($spacing-1 * 16);
+  width: calc($spacing-1 * 20);
+  height: calc($spacing-1 * 20);
 }
 
 /* Responsividade para totem */
