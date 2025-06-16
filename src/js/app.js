@@ -20,6 +20,9 @@ class App {
     // Inicializar relógio em todas as páginas
     this.clock.init();
 
+    // Configurar botão voltar
+    this.configureBackButton();
+
     // Inicializar funcionalidades específicas por página
     switch (this.currentPage) {
       case "index":
@@ -39,16 +42,12 @@ class App {
     if (backButton) {
       backButton.addEventListener("click", (e) => {
         e.preventDefault();
-        this.goBack();
+        if (window.history.length > 1) {
+          window.history.back(); // Voltar para a página anterior
+        } else {
+          window.location.href = "index.html"; // Redirecionar para a página inicial se não houver histórico
+        }
       });
-    }
-  }
-
-  goBack() {
-    if (window.history.length > 1) {
-      window.history.back();
-    } else {
-      window.location.href = "index.html";
     }
   }
 

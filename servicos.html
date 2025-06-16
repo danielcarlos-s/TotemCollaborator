@@ -27,33 +27,35 @@
     <link rel="stylesheet" href="/src/css/style.css" />
   </head>
 
-  <body>
-    <!-- Header -->
-    <header class="header-main">
-      <div class="container">
-        <div class="header-content">
-          <div class="header-info">
-            <button class="btn btn-outline-light">
-              <i class="fas fa-arrow-left"></i> Voltar
+<body class="min-h-screen">
+
+     <!-- Header -->
+  <header class="header-main">
+    <div class="container mx-auto px-4 py-6">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center" style="gap: 1rem;">
+          <!-- botão voltar -->
+          <button class="btn btn-outline-light">
+              <i class="fas fa-arrow-left"></i>
             </button>
-            <div class="header-icon">
-              <i class="fas fa-list"></i>
-            </div>
-            <div class="header-text">
-              <h1>Todos os Serviços</h1>
-              <p>Prefeitura Municipal</p>
-            </div>
+          <!-- Título -->
+          <div class="text-left">
+            <h1 class="text-white">Portal de Serviços</h1>
+            <h5>Prefeitura Municipal</h5>
           </div>
-          <div class="header-time">
+        </div>
+        <div class="header-content">
+          <div class="header-time" style="display: flex; flex-flow: column nowrap; align-items: start;">
             <div class="time-display">
               <i class="fas fa-clock"></i>
               <span id="current-time">00:00</span>
             </div>
-            <p id="current-date">Carregando...</p>
+            <p id="current-date" class="text-white">Carregando...</p>
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
     <!-- Main Content -->
     <main class="main-content">
