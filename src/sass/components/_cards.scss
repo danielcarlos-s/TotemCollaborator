@@ -30,8 +30,9 @@
   }
 
   .icon-right-next {
-@include flexrow-start;
-    background: rgba($primary-blue, 0.1);;
+    @include flexrow-start;
+    background: rgba($primary-blue, 0.1);
+    ;
     width: 2rem;
     height: 2rem;
   }
@@ -63,7 +64,7 @@
   }
 
   .service-action {
-@include flexrow-start;
+    @include flexrow-start;
     color: $primary-blue;
     font-weight: 500;
 
@@ -115,6 +116,49 @@
 
 // --------------------------------------
 
+.help-card {
+  margin: 1.5rem;
+  padding: 1.5rem;
+  border-left: 4px solid $primary-yellow-rgb;
+  background-color: rgba($primary-yellow-rgb, 0.1);
+  @include flexrow-between;
+
+  .div_help-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .texts_div_help-card {
+      display: flex;
+      align-items: center;
+
+      .icon_texts_div_help-card {
+        margin-right: 16px;
+      }
+      .text_texts_div_help-card {
+        h3 {
+          color: rgb(133,77,14);
+        }
+        p {
+          color: rgb(161,98,7);
+        }
+      }
+    }
+
+    .button_div_help-card {
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      padding: 12px 24px;
+      background-color: rgba($primary-yellow, 1);
+      border-radius: $border-radius-md;
+      color: white;
+    }
+  }
+}
+
+// --------------------------------------
+
 .document-card {
   @include card-base;
   @include card-hover;
@@ -124,7 +168,7 @@
     margin-bottom: $spacing-4;
 
     .document-info {
-  @include flexrow-start;
+      @include flexrow-start;
 
       i {
         font-size: $font-2xl;
@@ -159,7 +203,7 @@
     margin-bottom: $spacing-4;
 
     h4 {
-  @include flexrow-start;
+      @include flexrow-start;
       font-weight: 600;
       color: $gray-800;
       margin-bottom: $spacing-2;
@@ -187,7 +231,7 @@
     border-top: 1px solid $gray-200;
 
     .document-deadline {
-  @include flexrow-start;
+      @include flexrow-start;
       color: $gray-600;
 
       i {

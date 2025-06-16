@@ -13,46 +13,50 @@
 // ## flexbox row -------------------
 @mixin flexrow-start {
   @include flexrow;
-  align-items: center;
   justify-content: flex-start;
+  align-items: center;
 }
 
 @mixin flexrow-center {
   @include flexrow;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 @mixin flexrow-between {
   @include flexrow;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 // ## flexbox column -------------------
 @mixin flexcolumn-start {
   @include flexcolumn;
-  align-items: center;
   justify-content: start;
+  align-items: center;
+}
+
+@mixin flexcolumn-start-start {
+  @include flexcolumn-start;
+  align-items: start;
 }
 
 @mixin flexcolumn-center {
   @include flexcolumn;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 @mixin flexcolumn-between {
   @include flexcolumn;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 @mixin flexcolumn-between-start {
   @include flexcolumn-between;
   align-items: start;
 }
-
 
 // -------------------------------------------------------------------
 
@@ -79,6 +83,8 @@
   }
 }
 
+// -------------------------------------------------------------------
+
 // Card mixins
 @mixin card-base {
   background: white;
@@ -94,6 +100,8 @@
     transform: translateY(-2px);
   }
 }
+
+// -------------------------------------------------------------------
 
 // Responsive mixins
 @mixin mobile {
@@ -113,6 +121,8 @@
     @content;
   }
 }
+
+// -------------------------------------------------------------------
 
 // Grid mixins
 @mixin grid-responsive($cols-mobile: 1, $cols-tablet: 2, $cols-desktop: 3) {
