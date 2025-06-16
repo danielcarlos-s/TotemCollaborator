@@ -1,5 +1,5 @@
 // # Flexbox mixins
-
+// ## base dos flexboxes -------------------
 @mixin flexrow {
   display: flex;
   flex-flow: row nowrap;
@@ -10,8 +10,7 @@
   flex-flow: column nowrap;
 }
 
-// ## flexbox mixins
-// ### flexbox row
+// ## flexbox row -------------------
 @mixin flexrow-start {
   @include flexrow;
   align-items: center;
@@ -30,7 +29,7 @@
   justify-content: space-between;
 }
 
-// ### flexbox column
+// ## flexbox column -------------------
 @mixin flexcolumn-start {
   @include flexcolumn;
   align-items: center;
