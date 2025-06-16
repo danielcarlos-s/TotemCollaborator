@@ -26,7 +26,12 @@ a {
 
 // Lists
 ul, ol {
-  list-style: none;
+  list-style: initial; /* Exibe os marcadores padrão */
+  // margin-left: 1.5rem; /* Adiciona recuo para os marcadores */
+  
+  li::marker {
+    color: $primary-blue; // ou a cor que quiser, ex: #2563eb ou rgb(37, 99, 235)
+  }
 }
 
 // Images

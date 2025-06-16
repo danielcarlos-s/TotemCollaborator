@@ -1,87 +1,40 @@
+import { ServicesManager } from "./services.js";
+import { createCard } from "./components.js";
 
-// Módulo para detalhes de serviços
-import { ServicesManager } from './services.js';
+function loadServiceDetails() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const serviceId = parseInt(urlParams.get("id"));
 
-export class ServiceDetail {
-  constructor() {
-    this.servicesManager = new ServicesManager();
-  }
+  const servicesManager = new ServicesManager();
+  const service = servicesManager.getServiceById(serviceId);
 
-  loadServiceDetails() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const serviceId = urlParams.get('id');
-    
-    const service = this.servicesManager.getServiceById(serviceId);
-    
-    if (service) {
-      this.updateServiceInfo(service);
-      this.loadRequirements(service.requirements);
-      this.loadSteps(service.steps);
-      this.loadForms(service.forms);
+  if (service) {
+    // Atualizar título e descrição
+    document.getElementById("service-title").textContent = service.name;
+    document.getElementById("service-description").textContent = service.description;
+
+    // Renderizar os cards dinamicamente
+    const cardsContainer = document.getElementById("cards-container");
+    if (service.cards && service.cards.length > 0) {
+      cardsContainer.innerHTML = service.cards
+        .map((card) =>
+          createCard({
+            title: card.title,
+            description: card.description,
+            icon: card.icon,
+            colorClass: card.colorClass || "bg-primary", // Classe de cor padrão
+          })
+        )
+        .join("");
+    } else {
+      cardsContainer.innerHTML = "<p>Nenhum card disponível para este serviço.</p>";
     }
-  }
-
-  updateServiceInfo(service) {
-    const titleElement = document.getElementById('service-title');
-    const descriptionElement = document.getElementById('service-description');
-    
-    if (titleElement) titleElement.textContent = service.name;
-    if (descriptionElement) descriptionElement.textContent = service.description;
-  }
-
-  loadRequirements(requirements) {
-    const requirementsList = document.getElementById('requirements-list');
-    if (requirementsList) {
-      requirementsList.innerHTML = requirements.map(req => 
-        `<li class="mb-2">${req}</li>`
-      ).join('');
-    }
-  }
-
-  loadSteps(steps) {
-    const stepsList = document.getElementById('steps-list');
-    if (stepsList) {
-      stepsList.innerHTML = steps.map(step => 
-        `<li class="mb-3">${step}</li>`
-      ).join('');
-    }
-  }
-
-  loadForms(forms) {
-    const formsList = document.getElementById('forms-list');
-    if (formsList) {
-      if (forms.length > 0) {
-        formsList.innerHTML = forms.map(form => `
-          <div class="form-item d-flex justify-content-between align-items-center">
-            <span class="fw-medium">${form.name}</span>
-            <div class="btn-group" role="group">
-              <button class="btn btn-outline-primary btn-sm" onclick="window.open('${form.url}', '_blank')">
-                <i class="fas fa-eye me-1"></i> Ver
-              </button>
-              <button class="btn btn-outline-success btn-sm" onclick="window.location.href='${form.url}'">
-                <i class="fas fa-download me-1"></i> Baixar
-              </button>
-            </div>
-          </div>
-        `).join('');
-      } else {
-        formsList.innerHTML = '<p class="text-muted">Nenhum formulário disponível para este serviço.</p>';
-      }
-    }
-  }
-
-  init() {
-    this.loadServiceDetails();
-    this.setupFormHandler();
-  }
-
-  setupFormHandler() {
-    const serviceForm = document.getElementById('service-form');
-    if (serviceForm) {
-      serviceForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        alert('Serviço solicitado com sucesso!');
-      });
-    }
+  } else {
+    console.error("Serviço não encontrado!");
+    document.getElementById("service-title").textContent = "Serviço não encontrado";
+    document.getElementById("service-description").textContent =
+      "O serviço solicitado não foi encontrado. Por favor, volte e tente novamente.";
   }
 }
+
+document.addEventListener("DOMContentLoaded", loadServiceDetails);

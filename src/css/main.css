@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "/node_modules/@phosphor-icons/web/src/Style.css";
 * {
   margin: 0;
@@ -24,7 +25,10 @@ a {
 }
 
 ul, ol {
-  list-style: none;
+  list-style: initial; /* Exibe os marcadores padrão */
+}
+ul li::marker, ol li::marker {
+  color: #2563eb;
 }
 
 img {

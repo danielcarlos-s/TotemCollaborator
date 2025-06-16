@@ -1,7 +1,8 @@
-// Arquivo principal da aplicação
 import { Clock } from "./modules/clock.js";
 import { HomeServicesList } from "./modules/homeServicesList.js";
 import { ServicesList } from "./modules/servicesList.js";
+import { ServicesManager } from "./modules/services.js";
+import { createCard } from "./modules/components.js";
 
 class App {
   constructor() {
@@ -27,15 +28,34 @@ class App {
       case "servicos":
         this.initServicesPage();
         break;
-      // case 'service-detail':
-      //   this.initServiceDetailPage();
-      //   break;
+      case "service-detail":
+        this.initServiceDetailPage();
+        break;
+    }
+  }
+
+  configureBackButton() {
+    const backButton = document.querySelector(".btn-outline-light");
+    if (backButton) {
+      backButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        this.goBack();
+      });
+    }
+  }
+
+  goBack() {
+    if (window.history.length > 1) {
+      window.history.back();
+    } else {
+      window.location.href = "index.html";
     }
   }
 
   initIndexPage() {
     console.log("Página inicial carregada");
-    // Funcionalidades específicas da página inicial podem ser adicionadas aqui
+    const homeServices = new HomeServicesList();
+    homeServices.init();
   }
 
   initServicesPage() {
@@ -44,10 +64,45 @@ class App {
     servicesList.init();
   }
 
-  initIndexPage() {
-    console.log("Página inicial carregada");
-    const homeServices = new HomeServicesList();
-    homeServices.init();
+  initServiceDetailPage() {
+    console.log("Página de detalhes do serviço carregada");
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceId = parseInt(urlParams.get("id"));
+
+    const servicesManager = new ServicesManager();
+    const service = servicesManager.getServiceById(serviceId);
+
+    if (service) {
+      // Atualizar título e descrição
+      document.getElementById("service-title").textContent = service.name;
+      document.getElementById("service-description").textContent =
+        service.description;
+
+      // Renderizar os cards dinamicamente
+      const cardsContainer = document.getElementById("cards-container");
+      if (service.cards && service.cards.length > 0) {
+        cardsContainer.innerHTML = service.cards
+          .map((card) =>
+            createCard({
+              title: card.title,
+              description: card.description,
+              icon: card.icon,
+              colorClass: card.colorClass || "bg-primary", // Classe de cor padrão
+            })
+          )
+          .join("");
+      } else {
+        cardsContainer.innerHTML =
+          "<p>Nenhum card disponível para este serviço.</p>";
+      }
+    } else {
+      console.error("Serviço não encontrado!");
+      document.getElementById("service-title").textContent =
+        "Serviço não encontrado";
+      document.getElementById("service-description").textContent =
+        "O serviço solicitado não foi encontrado. Por favor, volte e tente novamente.";
+    }
   }
 }
 

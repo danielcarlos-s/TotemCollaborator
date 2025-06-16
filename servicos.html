@@ -19,15 +19,12 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/style.css">
-
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
-    <!-- CSS principal compilado -->
-    <!-- <link rel="stylesheet" href="./src/css/style.css" />  -->
-    <link rel="stylesheet" href="./src/css/main.css" />
+    <link rel="stylesheet" href="/src/css/main.min.css" />
+    <link rel="stylesheet" href="/src/css/style.css" />
   </head>
 
   <body>
@@ -36,9 +33,9 @@
       <div class="container">
         <div class="header-content">
           <div class="header-info">
-            <a href="index.html" class="back-btn">
-              <i class="fas fa-arrow-left"></i>
-            </a>
+            <button class="btn btn-outline-light">
+              <i class="fas fa-arrow-left"></i> Voltar
+            </button>
             <div class="header-icon">
               <i class="fas fa-list"></i>
             </div>
@@ -67,7 +64,7 @@
             <p>Encontre todos os serviços disponibilizados pela prefeitura</p>
           </div>
 
-          <div id="services-list" class="services-list">
+          <div id="services-list">
             <!-- Os serviços serão carregados via JavaScript -->
           </div>
         </section>

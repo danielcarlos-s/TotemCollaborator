@@ -14,7 +14,7 @@ export class ServicesList {
       : ""; //  badge para serviços populares
 
     return `
-      <div class="service-list">
+      <div class="service-list" onclick="window.location.href='${service.url}'">
             <div class="row align-items-center">
               <div class="col-auto">
                 <div class="service-icon ${service.iconClass}">
@@ -41,14 +41,20 @@ export class ServicesList {
   }
 
   loadAllServices() {
-    const servicesList = document.getElementById("services-list");
-    if (servicesList) {
-      const services = this.servicesManager.getAllServices();
-      servicesList.innerHTML = services
-        .map((service) => this.createServiceListItem(service))
-        .join("");
-    }
+  const urlParams = new URLSearchParams(window.location.search);
+  const group = urlParams.get("group");
+
+  const servicesList = document.getElementById("services-list");
+  if (servicesList) {
+    const services = this.servicesManager.getAllServices().filter(service => {
+      return service.group === group; // Filtrar pelo campo "group"
+    });
+
+    servicesList.innerHTML = services
+      .map((service) => this.createServiceListItem(service))
+      .join("");
   }
+}
 
   init() {
     this.loadAllServices();
