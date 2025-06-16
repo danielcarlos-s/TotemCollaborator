@@ -19,28 +19,27 @@
 <body class="min-h-screen">
   <!-- Header -->
   <header class="header-main">
-    <!-- incomplete new class -->
     <div class="container mx-auto px-4 py-6">
       <div class="flex items-center justify-between">
-        <div class="flex items-center">
+        <div class="flex items-center" style="gap: 1rem;">
           <!-- Logo -->
           <div class="logo">
             <!-- Ícone da Logo -->
-            <i class="fas fa-landmark text-white text-2xl"></i>
+            <i class="fas fa-landmark text-blue-600 text-3xl"></i>
           </div>
           <!-- Título -->
-          <div class="text-center md:text-left">
-            <h1>Portal de Serviços</h1>
+          <div class="text-left">
+            <h1 class="text-white">Portal de Serviços</h1>
             <h5>Prefeitura Municipal</h5>
           </div>
         </div>
         <div class="header-content">
-          <div class="header-time">
+          <div class="header-time" style="display: flex; flex-flow: column nowrap; align-items: start;">
             <div class="time-display">
               <i class="fas fa-clock"></i>
               <span id="current-time">00:00</span>
             </div>
-            <p id="current-date">Carregando...</p>
+            <p id="current-date" class="text-white">Carregando...</p>
           </div>
         </div>
       </div>
@@ -49,7 +48,12 @@
 
   <!-- Main Content -->
   <main class="container mx-auto px-4 py-8">
-    <!-- Welcome Section -->
+    <!-- # Welcome Section -->
+    <!-- ## 'Como usar este totem' -->
+    <div>
+      
+    </div>
+    <!-- ## Título e Subtítulo -->
     <div class="text-center mb-12">
       <h2 class="text-gray-800 mb-4">Bem-vindo ao Portal de Serviços</h2>
       <p>
@@ -58,7 +62,7 @@
       </p>
     </div>
     <div class="container">
-      <!-- Services Grid (unofficial) -->
+      <!-- # Services Grid (unofficial) -->
       <section id="home-services" class="grid grid-4">
         <!-- Os cards da Home serão carregados aqui -->
       </section>
