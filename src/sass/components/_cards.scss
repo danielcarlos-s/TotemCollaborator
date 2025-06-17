@@ -83,6 +83,53 @@
 
 // --------------------------------------
 
+.detail-card {
+  @include card-base;
+  @include card-hover;
+  box-shadow: $shadow-sm;
+
+  // .detail-header {
+    // @include flexrow-between;
+  //   margin-bottom: $spacing-4;
+
+  //   .detail-title {
+  //     font-size: $font-xl;
+  //     font-weight: 700;
+  //     color: $gray-800;
+  //   }
+
+  //   .detail-price {
+  //     background-color: rgba($primary-blue, 0.1);
+  //     color: $primary-blue;
+  //     font-size: $font-sm;
+  //     font-weight: 500;
+  //     padding: $spacing-1 $spacing-3;
+  //     border-radius: 9999px;
+  //   }
+  // }
+
+  // .detail-content {
+  //   color: $gray-600;
+  //   margin-bottom: $spacing-4;
+  // }
+
+  // .detail-footer {
+  //   @include flexrow-between;
+  //   padding-top: $spacing-4;
+  //   border-top: 1px solid $gray-200;
+
+  //   .detail-button {
+  //     @include button-primary;
+
+  //     i {
+  //       margin-right: $spacing-2;
+  //     }
+  //   }
+  // }
+}
+
+// --------------------------------------
+
 .info-card {
   @include card-base;
 

@@ -88,7 +88,7 @@
 // Card mixins
 @mixin card-base {
   background: white;
-  border-radius: $border-radius-xl;
+  border-radius: $border-radius-md;
   box-shadow: $shadow-lg;
   padding: $spacing-6;
   transition: $transition-all;
