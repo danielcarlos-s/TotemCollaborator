@@ -11,30 +11,29 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/src/css/main.min.css" />
+  <link rel="stylesheet" href="/src/css/main.css" />
 </head>
 
-<body class="min-h-screen">
+<body>
   <!-- Header -->
   <header class="header-main">
-    <div class="container mx-auto px-4 py-6">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center" style="gap: 1rem;">
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <div class="d-flex align-items-center gap-3">
           <!-- Logo -->
           <div class="logo">
             <!-- Ícone da Logo -->
-            <i class="fas fa-landmark text-blue-600 text-3xl"></i>
+            <i class="fas fa-landmark"></i>
           </div>
           <!-- Título -->
-          <div class="text-left">
-            <h1 class="text-white">Portal de Serviços</h1>
+          <div class="d-flex flex-column">
+            <h1>Portal de Serviços</h1>
             <h5>Prefeitura Municipal</h5>
           </div>
         </div>
         <div class="header-content">
-          <div class="header-time" style="display: flex; flex-flow: column nowrap; align-items: start;">
+          <div class="header-time">
             <div class="time-display">
               <i class="fas fa-clock"></i>
               <span id="current-time">00:00</span>
@@ -47,10 +46,10 @@
   </header>
 
   <!-- Main Content -->
-  <main class="container mx-auto conteudoPrincipal">
+  <main class="container">
     <!-- Welcome Section -->
     <div class="section-header">
-      <h2 class="text-gray-800 mb-4">Bem-vindo ao Portal de Serviços</h2>
+      <h2>Bem-vindo ao Portal de Serviços</h2>
       <p>
         Acesse todos os serviços da prefeitura de forma rápida e fácil.
         Selecione o serviço desejado nos cartões abaixo.
@@ -65,41 +64,41 @@
 
     <!-- Contact Information -->
     <div class="container">
-      <div class="row grid grid-1">
+      <div class="row">
         <div class="info-card p-8 mb-8">
           <!-- Os cards da Home serão carregados aqui -->
-          <h3 class="info-title">Informações de Contato</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h3 class="info-title pb-4">Informações de Contato</h3>
+          <div class="grid grid-4">
             <!-- Atendimento Geral -->
-            <div class="text-center">
-              <div class="info-icon bg-blue-100">
+            <div class="d-flex flex-column align-items-center">
+              <div class="info-icon icon-blue">
                 <i class="fas fa-phone text-blue-600 text-xl"></i>
               </div>
-              <h4 class="info-title2">Atendimento Geral</h4>
+              <h4>Atendimento Geral</h4>
               <p>(11) 1234-5678</p>
             </div>
             <!-- Ouvidoria -->
-            <div class="text-center">
-              <div class="info-icon bg-green-100">
+            <div class="d-flex flex-column align-items-center">
+              <div class="info-icon icon-green">
                 <i class="fas fa-comments text-green-600 text-xl"></i>
               </div>
-              <h4 class="info-title2">Ouvidoria</h4>
+              <h4>Ouvidoria</h4>
               <p>(11) 1234-5679</p>
             </div>
             <!-- Emergência -->
-            <div class="text-center">
-              <div class="info-icon bg-red-100">
+            <div class="d-flex flex-column align-items-center">
+              <div class="info-icon icon-red">
                 <i class="fas fa-exclamation-triangle text-red-600 text-xl"></i>
               </div>
-              <h4 class="info-title2">Emergência</h4>
+              <h4>Emergência</h4>
               <p>193 / 192 / 190</p>
             </div>
             <!-- WhatsApp -->
-            <div class="text-center">
-              <div class="info-icon bg-green-100">
+            <div class="d-flex flex-column align-items-center">
+              <div class="info-icon icon-green">
                 <i class="fab fa-whatsapp text-green-600 text-xl"></i>
               </div>
-              <h4 class="info-title2">WhatsApp</h4>
+              <h4>WhatsApp</h4>
               <p>(11) 9 9999-9999</p>
             </div>
         </div>
@@ -111,7 +110,7 @@
   <!-- Footer -->
   <footer>
     <div class="footer-container">
-      <div class="text-center">
+      <div class="d-flex flex-column align-items-center">
         <p class="footer-main">
           © 2024 Prefeitura Municipal. Todos os direitos reservados.
         </p>

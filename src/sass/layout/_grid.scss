@@ -2,13 +2,6 @@ main {
   flex: 1;
 }
 
-.container {
-  max-width: 1080px;
-  margin: 0 auto;
-  // padding: 0 $spacing-4;
-  padding: 4px 6px;
-}
-
 .grid {
   display: grid;
   gap: $spacing-6;

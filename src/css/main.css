@@ -158,6 +158,9 @@ p {
           box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   position: relative;
 }
+.header-main h1 {
+  color: #f9fafb;
+}
 .header-main .header-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -241,6 +244,16 @@ p {
   color: white;
 }
 .header-main .header-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   text-align: center;
   border-radius: 0.25rem;
   padding: 1rem 1.5rem;
@@ -288,6 +301,8 @@ p {
   margin-right: 4px;
   width: 5rem;
   height: 5rem;
+  color: #2563eb;
+  font-size: 1.875rem;
 }
 
 /* Responsividade para totem */
@@ -304,10 +319,19 @@ p {
     width: 100%;
   }
 }
+.container .section-header {
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+}
+.container .section-header h2,
+.container .section-header p {
+  text-align: center;
+}
+
 footer {
-  background-color: #1f2937;
   color: white;
   padding: 1.5rem 0;
+  background-color: #1f2937;
   margin-top: auto;
 }
 footer .footer-container {
@@ -329,12 +353,6 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-}
-
-.container {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 4px 6px;
 }
 
 .grid {
@@ -368,7 +386,7 @@ main {
 .grid.grid-4 {
   grid-template-columns: repeat(4, 1fr);
 }
-@media (min-width: 1025px) {
+@media (min-width: 1280px) {
   .grid.grid-4 {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -395,7 +413,7 @@ main {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1280px) {
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -411,7 +429,7 @@ main {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1280px) {
   .contact-grid {
     grid-template-columns: repeat(4, 1fr);
   }
