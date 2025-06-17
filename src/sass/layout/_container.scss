@@ -1,0 +1,11 @@
+.container{
+    .section-header {
+        margin-top: $spacing-10;
+        margin-bottom: $spacing-12;
+
+        h2,
+        p {
+            text-align: center;
+        }
+    }
+}
