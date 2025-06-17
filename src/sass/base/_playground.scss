@@ -19,5 +19,21 @@
 
 // }
 
+.conteudoPrincipal {
+    padding: 36px 4px !important;
+
+    .section-header {
+
+        h2,
+        p {
+            text-align: center;
+        }
+    }
+}
+
+.conteudoSegundaPagina {
+    max-width: 1080px;
+    margin: 0 auto;
+}
 
 // ------------------------------------------------------------------------
