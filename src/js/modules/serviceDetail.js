@@ -1,5 +1,32 @@
 import { ServicesManager } from "./services.js";
-import { createCard } from "./components.js";
+import {
+  createCard,
+  cardDocumentos,
+  cardComoSolicitar,
+  cardInfoAtendimento,
+  cardSolicitarServico,
+  cardFormulariosDisponiveis,
+  cardConsultarStatus
+} from "./components.js";
+
+function renderCard(card) {
+  switch (card.type) {
+    case "documentos":
+      return cardDocumentos(card);
+    case "como-solicitar":
+      return cardComoSolicitar(card);
+    case "info-atendimento":
+      return cardInfoAtendimento(card);
+    case "solicitar-servico":
+      return cardSolicitarServico(card);
+    case "formularios-disponiveis":
+      return cardFormulariosDisponiveis(card);
+    case "consultar-status":
+      return cardConsultarStatus(card);
+    default:
+      return createCard(card);
+  }
+}
 
 function loadServiceDetails() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -10,23 +37,16 @@ function loadServiceDetails() {
 
   if (service) {
     // Atualizar título e descrição
-    document.getElementById("service-title").textContent = service.name;
-    document.getElementById("service-description").textContent = service.description;
+    const titleEl = document.getElementById("service-title");
+    const descEl = document.getElementById("service-description");
+    if (titleEl) titleEl.textContent = service.name;
+    if (descEl) descEl.textContent = service.description;
 
     // Renderizar os cards dinamicamente
     const cardsContainer = document.getElementById("cards-container");
-    if (service.cards && service.cards.length > 0) {
-      cardsContainer.innerHTML = service.cards
-        .map((card) =>
-          createCard({
-            title: card.title,
-            description: card.description,
-            icon: card.icon,
-            colorClass: card.colorClass || "bg-primary", // Classe de cor padrão
-          })
-        )
-        .join("");
-    } else {
+    if (cardsContainer && service.cards && service.cards.length > 0) {
+      cardsContainer.innerHTML = service.cards.map(renderCard).join("");
+    } else if (cardsContainer) {
       cardsContainer.innerHTML = "<p>Nenhum card disponível para este serviço.</p>";
     }
   } else {
