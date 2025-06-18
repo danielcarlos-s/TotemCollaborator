@@ -5,6 +5,7 @@ main {
 .grid {
   display: grid;
   gap: $spacing-6;
+  // align-items: start;
 
   &.grid-1 {
     grid-template-columns: 1fr;

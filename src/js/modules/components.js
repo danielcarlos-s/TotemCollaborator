@@ -7,6 +7,7 @@
  * @param {string} options.colorClass - Classe de cor do cabeçalho (ex: "bg-primary")
  * @returns {string} - HTML do card
  */
+
 export function createCard({ title, description, icon, colorClass }) {
   return `
     <div class="col-md-6 mb-4">
@@ -24,25 +25,20 @@ export function createCard({ title, description, icon, colorClass }) {
   `;
 }
 
-// -------------------------------------------
-
-// ...existing code...
-
 // Card: Documentos Necessários
+/**
+ * @param {Object} card
+ * @param {string} card.title
+ * @param {string[]} card.items
+ * @returns {string}
+ */
 export function cardDocumentos({ title, items }) {
   return `
     <div class="detail-card">
-      <div class="detail-header">
-        <div class="detail-title">${title}</div>
-      </div>
+      <div class="detail-header"><h4>${title}</h4></div>
       <div class="detail-content">
-        <ul class="space-y-2">
-          ${items.map(item => `
-            <li class="flex items-start">
-              <span class="w-2 h-2 mt-2 mr-3 rounded-full bg-blue-600 flex-shrink-0"></span>
-              <span>${item}</span>
-            </li>
-          `).join("")}
+        <ul>
+          ${items.map(item => `<li><p>${item}</p></li>`).join("")}
         </ul>
       </div>
     </div>

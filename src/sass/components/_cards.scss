@@ -85,7 +85,6 @@
 
 .detail-card {
   @include card-base;
-  // @include card-hover;
   box-shadow: $shadow-sm;
   border: 1px solid rgb(222, 226, 230);
 
@@ -112,6 +111,41 @@
   .detail-content {
     color: $gray-600;
     margin-bottom: $spacing-4;
+
+    ul {
+      padding: 0 $spacing-5;
+    }
+
+    // ADICIONADO: estilo para blocos com ícone e texto
+    .icon-text-block {
+      display: flex;
+      align-items: center;
+      gap: $spacing-3; // espaço entre ícone e texto
+
+      svg {
+        flex-shrink: 0;
+        color: $primary-blue;
+      }
+
+      .text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h5 {
+          margin: 0 0 $spacing-1 0;
+          font-size: $font-base;
+          font-weight: 600;
+          color: $gray-800;
+        }
+
+        p {
+          margin: 0;
+          font-size: $font-sm;
+          color: $gray-600;
+        }
+      }
+    }
   }
 
   .detail-footer {

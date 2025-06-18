@@ -1,7 +1,7 @@
 // Módulo para lista de serviços
 //-----------------------------------------------------------------------//
 
-import { ServicesManager } from "./services.js";
+import { ServicesManager } from "../services.js";
 
 export class ServicesList {
   constructor() {
@@ -41,20 +41,20 @@ export class ServicesList {
   }
 
   loadAllServices() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const group = urlParams.get("group");
+    const urlParams = new URLSearchParams(window.location.search);
+    const group = urlParams.get("group");
 
-  const servicesList = document.getElementById("services-list");
-  if (servicesList) {
-    const services = this.servicesManager.getAllServices().filter(service => {
-      return service.group === group; // Filtrar pelo campo "group"
-    });
+    const servicesList = document.getElementById("services-list");
+    if (servicesList) {
+      const services = this.servicesManager.getAllServices().filter(service => {
+        return service.group === group; // Filtrar pelo campo "group"
+      });
 
-    servicesList.innerHTML = services
-      .map((service) => this.createServiceListItem(service))
-      .join("");
+      servicesList.innerHTML = services
+        .map((service) => this.createServiceListItem(service))
+        .join("");
+    }
   }
-}
 
   init() {
     this.loadAllServices();

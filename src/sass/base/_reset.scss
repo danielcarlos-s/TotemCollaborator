@@ -28,12 +28,45 @@ a {
   text-decoration: none;
 }
 
-// Lists
-ul, ol {
-  list-style: initial;
+// Unordered Lists
+ul {
+  list-style: disc; // ou initial
+  padding-left: 1.5rem; // espaço menor para bullets
+
+  li {
+    padding-left: 0; // ou algo pequeno, se quiser alinhamento com texto
+  }
 
   li::marker {
     color: $primary-blue;
+  }
+}
+
+// Ordered Lists com contador personalizado
+ol {
+  list-style: none;
+  counter-reset: custom-counter;
+
+  li {
+    position: relative;
+    padding-left: 2.5rem; // necessário para o número com bolinha
+
+    &::before {
+      counter-increment: custom-counter;
+      content: counter(custom-counter);
+
+      position: absolute;
+      left: 0;
+      top: 0.1rem;
+      width: 2rem;
+      height: 2rem;
+      line-height: 2rem;
+      background-color: $primary-blue;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-weight: bold;
+    }
   }
 }
 
