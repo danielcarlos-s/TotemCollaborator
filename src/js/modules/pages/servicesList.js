@@ -14,7 +14,7 @@ export class ServicesList {
       : ""; //  badge para serviços populares
 
     return `
-      <div class="service-list" onclick="window.location.href='${service.url}'">
+      <div class="service-list servicos" onclick="window.location.href='${service.url}'">
             <div class="row align-items-center">
               <div class="col-auto">
                 <div class="service-icon ${service.iconClass}">

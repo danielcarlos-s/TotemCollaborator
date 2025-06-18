@@ -11,7 +11,7 @@ export class HomeServicesList {
       : "";
 
     return `
-      <div class="service-list" onclick="window.location.href='${service.url}'">
+      <div class="home-list" onclick="window.location.href='${service.url}'">
         <div class="d-flex align-items-center mb-2">
           <div class="flex-shrink-0 me-3">
             <div class="service-icon ${service.iconClass}">

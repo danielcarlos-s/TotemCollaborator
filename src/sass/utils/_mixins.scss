@@ -83,6 +83,20 @@
   }
 }
 
+  @mixin icon-card {
+    @include flexrow-center;
+    width: 4rem;
+    height: 4rem;
+    background: rgba($primary-blue, 0.1);
+    border-radius: $border-radius-lg;
+    box-shadow: none;
+
+    i {
+      font-size: 2rem;
+      transition: transform 0.2s ease;
+    }
+  }
+
 // -------------------------------------------------------------------
 
 // Card mixins
