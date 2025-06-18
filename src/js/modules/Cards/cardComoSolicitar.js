@@ -9,9 +9,9 @@ export function cardComoSolicitar({ title, steps }) {
     <div class="detail-card">
       <div class="detail-header"><h4>${title}</h4></div>
       <div class="detail-content">
-        <ol>
-          ${steps.map((step, idx) => `<li><p>${step}</p></li>`).join("")}
-        </ol>
+        <ul>
+          ${steps.map(item => `<li><p>${item}</p></li>`).join("")}
+        </ul>
       </div>
     </div>
   `;

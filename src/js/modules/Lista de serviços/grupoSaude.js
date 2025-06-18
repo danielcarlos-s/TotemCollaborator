@@ -6,7 +6,7 @@ export const grupoSaude = [
     description: "Marque suas consultas médicas de forma rápida e fácil.",
     icon: "fa fa-calendar",
     iconClass: "icon-blue",
-    url: "service-detail.html?id=1",
+    url: "service-detail.html?id=100",
     cards: [
       {
         type: "documentos",

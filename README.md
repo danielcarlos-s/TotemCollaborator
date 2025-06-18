@@ -1,73 +1,125 @@
-# Welcome to your Lovable project
+# Bem vindo ao projeto
 
-## Project info
+## 1. Como Adicionar cards na Home
 
-**URL**: https://lovable.dev/projects/3c1966b4-ecbb-405e-8a40-ce2e45e5ce41
+Abra o arquivo [homeService.js](./src/js/modules/homeServices.js)
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/3c1966b4-ecbb-405e-8a40-ce2e45e5ce41) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Encontre o método _getHomeServicesData_ e adicione um novo objetivo ao array retornando:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Exemplo de novo serviço para a home
+{
+  id: 999,
+  name: "Novo Serviço",
+  description: "Descrição do novo serviço.",
+  icon: "fa-solid fa-star",
+  iconClass: "icon-blue",
+  popular: true,
+  url: "servicos.html?group=novo-grupo"
+}
 ```
 
-**Edit a file directly in GitHub**
+## 2. Adicionar um novo serviço (com cards) para a lista de serviços e detalhes
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Vá até a pasta [Lista-de-serviços](./src/js/modules/Lista%20de%20serviços) e duplique algum arquivo renomeando com o nome que deseja mantendo o padrão[grupo+Nome-do-arquivo].
 
-**Use GitHub Codespaces**
+Adicione um novo serviço ao array exportado:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```sh
+{
+  id: 200,
+  group: "saude",
+  name: "Novo Serviço Saúde",
+  description: "Descrição do novo serviço de saúde.",
+  icon: "fa fa-heartbeat",
+  iconClass: "icon-red",
+  url: "service-detail.html?id=200",
+  cards: [
+    {
+      type: "documentos",
+      title: "Documentos Necessários",
+      items: [
+        "Documento de Identidade",
+        "Comprovante de Endereço"
+      ]
+    },
+    {
+      type: "como-solicitar",
+      title: "Como Solicitar",
+      steps: [
+        "Acesse o portal",
+        "Preencha o formulário",
+        "Envie os documentos"
+      ]
+    }
+    # ...adicione outros cards conforme necessário
+  ]
+}
+```
 
-## What technologies are used for this project?
+## 3. Adicionar um novo tipo de card (componente visual)
 
-This project is built with:
+Crie um novo arquivo para o card em [Cards](./src/js/modules/Cards/)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Exemplo: para um card de aviso, crie _cardAviso.js_:
 
-## How can I deploy this project?
+```sh
+##
+ # @param {Object} card
+ # @param {string} card.title
+ # @param {string} card.message
+ # @returns {string}
+##
+export function cardAviso({ title, message }) {
+  return `
+    <div class="detail-card">
+      <div class="detail-header"><h4>${title}</h4></div>
+      <div class="detail-content">
+        <p>${message}</p>
+      </div>
+    </div>
+  `;
+}
+```
+## 3.1 Importe e registre o novo card em [index.js](./src/js/modules/Cards/index.js)
 
-Simply open [Lovable](https://lovable.dev/projects/3c1966b4-ecbb-405e-8a40-ce2e45e5ce41) and click on Share -> Publish.
+Abra [index.js](./src/js/modules/Cards/index.js) e adicione o import e o case no __renderCard__:
 
-## Can I connect a custom domain to my Lovable project?
+```sh
+import { cardDocumentos } from "./cardDocumentos.js";
+import { cardComoSolicitar } from "./cardComoSolicitar.js";
+import { cardAviso } from "./cardAviso.js"; // <-- novo import
 
-Yes, you can!
+export function renderCard(card) {
+  switch (card.type) {
+    case "documentos":
+      return cardDocumentos(card);
+    case "como-solicitar":
+      return cardComoSolicitar(card);
+    case "aviso": // <-- novo tipo
+      return cardAviso(card);
+    // ...outros tipos
+    default:
+      return `<p>Tipo de card não suportado.</p>`;
+  }
+}
+```
+## 3.2 Use o novo tipo de card nos dados do serviço
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+No arquivo do grupo do serviço (ex: [grupoSaude.js](./src/js/modules/Lista%20de%20serviços/grupoSaude.js)), adicione o novo card ao array __cards__ do serviço:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+```sh
+cards: [
+  {
+    type: "documentos",
+    title: "Documentos Necessários",
+    items: ["RG", "CPF"]
+  },
+  {
+    type: "aviso", // <-- novo tipo
+    title: "Atenção",
+    message: "Este serviço só está disponível em dias úteis."
+  }
+]
+```

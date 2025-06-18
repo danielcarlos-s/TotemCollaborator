@@ -1,6 +1,6 @@
 // Exemplo correto:
-export { cardDocumentos } from "./cardDocumentos.js";
-export { cardComoSolicitar } from "./cardComoSolicitar.js";
+import { cardDocumentos } from "./cardDocumentos.js";
+import { cardComoSolicitar } from "./cardComoSolicitar.js";
 // export { cardInfoAtendimento } from "./cardInfoAtendimento.js";
 // ...outros cards
 
@@ -18,9 +18,7 @@ export function renderCard(card) {
       return cardDocumentos(card);
     case "como-solicitar":
       return cardComoSolicitar(card);
-    case "info-atendimento":
-      return cardInfoAtendimento(card);
-    // Adicione outros tipos de card conforme necessário
+    // ...outros tipos
     default:
       return `<p>Tipo de card não suportado.</p>`;
   }

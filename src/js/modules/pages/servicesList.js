@@ -14,29 +14,26 @@ export class ServicesList {
       : ""; //  badge para serviços populares
 
     return `
-      <div class="service-list servicos" onclick="window.location.href='${service.url}'">
-            <div class="row align-items-center">
-              <div class="col-auto">
-                <div class="service-icon ${service.iconClass}">
-                  <i class="${service.icon}"></i>
-                </div>
-              </div>
-              <div class="col">
-                <h5 class="card-title mb-1 d-flex align-items-center">
-                  ${service.name}
-                  ${popularBadge}
-                </h5>
-                <p class="mb-0">
-                  ${service.description}
-                </p>
-              </div>
-              <div class="col-auto">
-                <a class="service-icon-next">
-                  <i class="fas fa-chevron-right ms-1"></i>
-                </a>
-              </div>
-            </div>
+      <div class="service-list servicos" onclick="window.location.href='service-detail.html?id=${service.id}'">
+      <div class="row align-items-center">
+        <div class="col-auto">
+          <div class="service-icon ${service.iconClass}">
+            <i class="${service.icon}"></i>
           </div>
+        </div>
+        <div class="col">
+          <h5 class="card-title mb-1 d-flex align-items-center">
+            ${service.name}
+          </h5>
+          <p class="mb-0">${service.description}</p>
+        </div>
+        <div class="col-auto">
+          <a class="service-icon-next">
+            <i class="fas fa-chevron-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
     `;
   }
 
@@ -46,9 +43,11 @@ export class ServicesList {
 
     const servicesList = document.getElementById("services-list");
     if (servicesList) {
-      const services = this.servicesManager.getAllServices().filter(service => {
-        return service.group === group; // Filtrar pelo campo "group"
-      });
+      const services = this.servicesManager
+        .getAllServices()
+        .filter((service) => {
+          return service.group === group; // Filtrar pelo campo "group"
+        });
 
       servicesList.innerHTML = services
         .map((service) => this.createServiceListItem(service))

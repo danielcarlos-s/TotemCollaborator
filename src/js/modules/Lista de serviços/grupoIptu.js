@@ -1,6 +1,6 @@
 export const grupoIptu = [
   {
-    id: 200,
+    id: 1,
     group: "iptu",
     name: "Consulta IPTU",
     description: "Consulte informações e emita guias do IPTU.",
