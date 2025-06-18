@@ -12,8 +12,8 @@ export class HomeServicesManager {
         id: 1,
         name: "IPTU 2025",
         description: "Emissão de guia, consulta e certidão.",
-        icon: "fa fa-calendar", // icone da família de fontes
-        iconClass: "icon-blue", // classe CSS para estilização do ícone
+        icon: "fa-solid fa-file-invoice-dollar", // IPTU = imposto/imóvel
+        iconClass: "icon-blue",
         popular: false,
         url: "servicos.html?group=saude",
       },
@@ -21,28 +21,26 @@ export class HomeServicesManager {
         id: 2,
         name: "TAXAS E ISS AUTÔNOMO",
         description: "Emissão de guia e consulta da situação fiscal.",
-        icon: "fa fa-calendar", // icone da família de fontes
-        iconClass: "icon-blue", // classe CSS para estilização do ícone
+        icon: "fa-solid fa-receipt", // taxas/ISS = recibo
+        iconClass: "icon-blue",
         popular: false,
         url: "servicos.html?group=saude",
       },
       {
         id: 3,
         name: "SOLICITAÇÃO ON-LINE DE SERVIÇOS",
-        description:
-          "Faça uma solicitação através da internet, sem precisar sair de casa.",
-        icon: "fa fa-calendar", // icone da família de fontes
-        iconClass: "icon-blue", // classe CSS para estilização do ícone
+        description: "Faça uma solicitação através da internet, sem precisar sair de casa.",
+        icon: "fa-solid fa-laptop", // solicitação online = computador
+        iconClass: "icon-blue",
         popular: false,
         url: "servicos.html?group=saude",
       },
       {
         id: 4,
         name: "AGENDAR ATENDIMENTO PRESENCIAL",
-        description:
-          "O atendimento presencial na Receita precisa ser previamente agendado.",
-        icon: "fa fa-calendar", // icone da família de fontes
-        iconClass: "icon-blue", // classe CSS para estilização do ícone
+        description: "O atendimento presencial na Receita precisa ser previamente agendado.",
+        icon: "fa-solid fa-calendar-check", // agendamento = calendário com check
+        iconClass: "icon-blue",
         popular: false,
         url: "servicos.html?group=saude",
       },
@@ -59,20 +57,18 @@ export class HomeServicesManager {
       {
         id: 6,
         name: "ITBI",
-        description:
-          "Acompanhar processo, emitir guia, certidão, credenciados, dúvidas.",
-        icon: "fa fa-calendar", // icone da família de fontes
-        iconClass: "icon-blue", // classe CSS para estilização do ícone
+        description: "Acompanhar processo, emitir guia, certidão, credenciados, dúvidas.",
+        icon: "fa-solid fa-file-signature", // ITBI = transferência de imóvel
+        iconClass: "icon-blue",
         popular: false,
         url: "servicos.html?group=saude",
       },
       {
         id: 7,
         name: "EMPRESAS, MEI, AUTÔNOMOS",
-        description:
-          "Situação fiscal, declaração eletrônica, certidão, 2ª via de recolhimento de ISSQN e Taxas.",
-        icon: "fa fa-calendar", // icone da família de fontes
-        iconClass: "icon-blue", // classe CSS para estilização do ícone
+        description: "Situação fiscal, declaração eletrônica, certidão, 2ª via de recolhimento de ISSQN e Taxas.",
+        icon: "fa-solid fa-briefcase", // empresas/autônomos = maleta
+        iconClass: "icon-blue",
         popular: false,
         url: "servicos.html?group=saude",
       }
