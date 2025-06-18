@@ -8,11 +8,11 @@ export class HomeServicesManager {
 
   getHomeServicesData() {
     return [
-      {
+       {
         id: 1,
         name: "IPTU 2025",
         description: "Emissão de guia, consulta e certidão.",
-        icon: "fa-solid fa-file-invoice-dollar", // IPTU = imposto/imóvel
+        icon: "fa-solid fa-file-invoice-dollar",
         iconClass: "icon-blue",
         popular: false,
         url: "servicos.html?group=saude",
