@@ -15,7 +15,7 @@ export class HomeServicesManager {
         icon: "fa-solid fa-file-invoice-dollar",
         iconClass: "icon-blue",
         popular: false,
-        url: "servicos.html?group=saude",
+        url: "servicos.html?group=iptu",
       },
       {
         id: 2,
@@ -24,7 +24,7 @@ export class HomeServicesManager {
         icon: "fa-solid fa-receipt", // taxas/ISS = recibo
         iconClass: "icon-blue",
         popular: false,
-        url: "servicos.html?group=saude",
+        url: "servicos.html?group=taxas",
       },
       {
         id: 3,
@@ -33,7 +33,7 @@ export class HomeServicesManager {
         icon: "fa-solid fa-laptop", // solicitação online = computador
         iconClass: "icon-blue",
         popular: false,
-        url: "servicos.html?group=saude",
+        url: "servicos.html?group=online",
       },
       {
         id: 4,
@@ -42,7 +42,7 @@ export class HomeServicesManager {
         icon: "fa-solid fa-calendar-check", // agendamento = calendário com check
         iconClass: "icon-blue",
         popular: false,
-        url: "servicos.html?group=saude",
+        url: "servicos.html?group=presencial",
       },
       // {
       //   id: 5,
@@ -61,7 +61,7 @@ export class HomeServicesManager {
         icon: "fa-solid fa-file-signature", // ITBI = transferência de imóvel
         iconClass: "icon-blue",
         popular: false,
-        url: "servicos.html?group=saude",
+        url: "servicos.html?group=itbi",
       },
       {
         id: 7,
@@ -70,7 +70,7 @@ export class HomeServicesManager {
         icon: "fa-solid fa-briefcase", // empresas/autônomos = maleta
         iconClass: "icon-blue",
         popular: false,
-        url: "servicos.html?group=saude",
+        url: "servicos.html?group=empresas",
       }
       // {
       //   id: 8,

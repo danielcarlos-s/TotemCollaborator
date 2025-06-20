@@ -1,12 +1,15 @@
+export const grupoIptuTitulo = "Serviços de IPTU";
+export const grupoIptuSubtitulo = "Consulte e acesse todos os serviços relacionados ao IPTU";
+
 export const grupoIptu = [
   {
-    id: 1,
+    id: 100,
     group: "iptu",
     name: "Consulta IPTU",
     description: "Consulte informações e emita guias do IPTU.",
     icon: "fa fa-file-invoice-dollar",
     iconClass: "icon-green",
-    url: "service-detail.html?id=100",
+    url: "service-detail.html?id=1",
     cards: [
       {
         type: "documentos",

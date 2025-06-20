@@ -1,12 +1,15 @@
-export const grupoSaude = [
+export const grupoItbiTitulo = "Serviços de Itbi";
+export const grupoItbiSubtitulo = "Consulte e acesse todos os serviços relacionados ao Itbi";
+
+export const grupoItbi = [
   {
-    id: 100,
-    group: "saude",
-    name: "Saúde",
+    id: 600,
+    group: "itbi",
+    name: "ITBI",
     description: "Marque suas consultas médicas de forma rápida e fácil.",
     icon: "fa fa-calendar",
     iconClass: "icon-blue",
-    url: "service-detail.html?id=100",
+    url: "service-detail.html?id=6",
     cards: [
       {
         type: "documentos",

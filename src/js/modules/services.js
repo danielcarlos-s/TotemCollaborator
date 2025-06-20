@@ -1,15 +1,52 @@
+import { grupoIptu, grupoIptuTitulo, grupoIptuSubtitulo } from "./Lista de serviços/grupoIptu.js";
+import { grupoTaxas, grupoTaxasTitulo, grupoTaxasSubtitulo } from "./Lista de serviços/grupoTaxas.js";
+import { grupoOnline, grupoOnlineTitulo, grupoOnlineSubtitulo } from "./Lista de serviços/grupoOnline.js";
+import { grupoPresencial, grupoPresencialTitulo, grupoPresencialSubtitulo } from "./Lista de serviços/grupoPresencial.js";
+import { grupoItbi, grupoItbiTitulo, grupoItbiSubtitulo } from "./Lista de serviços/grupoItbi.js";
+import { grupoEmpresas, grupoEmpresasTitulo, grupoEmpresasSubtitulo } from "./Lista de serviços/grupoEmpresas.js";
+// ...outros grupos
 
-import { grupoSaude } from "./Lista de serviços/grupoSaude.js";
-import { grupoIptu } from "./Lista de serviços/grupoIptu.js";
-import { grupoFinancas } from "./Lista de serviços/grupoFinancas.js";
+// Títulos e Subtítulos
+export const gruposInfo = {
+  iptu: { 
+    titulo: grupoIptuTitulo,
+    subtitulo: grupoIptuSubtitulo
+  },
+  taxas: { 
+    titulo: grupoTaxasTitulo,
+    subtitulo: grupoTaxasSubtitulo
+  },
+  online: { 
+    titulo: grupoOnlineTitulo,
+    subtitulo: grupoOnlineSubtitulo
+  },
+  presencial: { 
+    titulo: grupoPresencialTitulo,
+    subtitulo: grupoPresencialSubtitulo
+  },
+  itbi: { 
+    titulo: grupoItbiTitulo,
+    subtitulo: grupoItbiSubtitulo
+  },
+  empresas: { 
+    titulo: grupoEmpresasTitulo,
+    subtitulo: grupoEmpresasSubtitulo
+  },
+  // ...outros grupos
+};
+
+
 // Importe outros grupos conforme necessário
 
 export class ServicesManager {
   getServicesData() {
     return [
-      ...grupoSaude,
       ...grupoIptu,
-      ...grupoFinancas,
+      ...grupoTaxas,
+      ...grupoOnline,
+      ...grupoPresencial,
+      ...grupoItbi,
+      ...grupoEmpresas,
       // ...adicione outros grupos aqui
     ];
   }

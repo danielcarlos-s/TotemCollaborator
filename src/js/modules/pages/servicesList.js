@@ -1,7 +1,7 @@
 // Módulo para lista de serviços
 //-----------------------------------------------------------------------//
 
-import { ServicesManager } from "../services.js";
+import { ServicesManager, gruposInfo } from "../services.js";
 
 export class ServicesList {
   constructor() {
@@ -40,6 +40,20 @@ export class ServicesList {
   loadAllServices() {
     const urlParams = new URLSearchParams(window.location.search);
     const group = urlParams.get("group");
+
+    // Defina título e subtítulo do grupo
+    const info = gruposInfo[group] || {
+      titulo: "Lista Completa de Serviços",
+      subtitulo: "Encontre todos os serviços disponibilizados pela prefeitura"
+    };
+
+    const sectionHeader = document.querySelector(".section-header");
+    if (sectionHeader) {
+      const h2 = sectionHeader.querySelector("h2");
+      const p = sectionHeader.querySelector("p");
+      if (h2) h2.textContent = info.titulo;
+      if (p) p.textContent = info.subtitulo;
+    }
 
     const servicesList = document.getElementById("services-list");
     if (servicesList) {
