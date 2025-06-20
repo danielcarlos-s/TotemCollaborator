@@ -10,8 +10,13 @@ export class HomeServicesList {
       ? '<span class="badge bg-success ms-2">Popular</span>'
       : "";
 
+    // Se tiver externalUrl, abre em nova aba, senão navega normalmente
+    const onClick = service.externalUrl
+      ? `window.open('${service.externalUrl}', '_blank')`
+      : `window.location.href='${service.url}'`;
+
     return `
-      <div class="home-list" onclick="window.location.href='${service.url}'">
+      <div class="home-list" onclick="${onClick}">
         <div class="d-flex align-items-center mb-2">
           <div class="flex-shrink-0 me-3">
             <div class="service-icon ${service.iconClass}">

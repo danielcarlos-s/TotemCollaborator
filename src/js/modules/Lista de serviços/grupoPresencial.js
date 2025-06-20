@@ -5,23 +5,12 @@ export const grupoPresencial = [
   {
     id: 400,
     group: "presencial",
-    name: "Saúde",
-    description: "Marque suas consultas médicas de forma rápida e fácil.",
+    name: "Realizar Agendamento",
+    description: "Clique aqui para",
     icon: "fa fa-calendar",
     iconClass: "icon-blue",
-    url: "service-detail.html?id=4",
-    cards: [
-      {
-        type: "documentos",
-        title: "Documentos Necessários",
-        items: [
-          "Documento de Identidade com foto",
-          "Cartão do SUS",
-          "Comprovante de residência"
-        ]
-      },
-      // ...outros cards
-    ]
+    // url: "service-detail.html?id=4",
+    externalUrl: "http://receita.contagem.mg.gov.br/agendamento/",
   },
   // ...outros serviços do grupo saúde
 ];

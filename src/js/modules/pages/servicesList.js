@@ -13,8 +13,12 @@ export class ServicesList {
       ? '<span class="badge bg-success ms-2">Popular</span>'
       : ""; //  badge para serviços populares
 
+    const onClick = service.externalUrl
+      ? `window.open('${service.externalUrl}', '_blank')`
+      : `window.location.href='service-detail.html?id=${service.id}'`;
+
     return `
-      <div class="service-list servicos" onclick="window.location.href='service-detail.html?id=${service.id}'">
+      <div class="service-list servicos" onclick="${onClick}">
       <div class="row align-items-center">
         <div class="col-auto">
           <div class="service-icon ${service.iconClass}">
@@ -44,7 +48,7 @@ export class ServicesList {
     // Defina título e subtítulo do grupo
     const info = gruposInfo[group] || {
       titulo: "Lista Completa de Serviços",
-      subtitulo: "Encontre todos os serviços disponibilizados pela prefeitura"
+      subtitulo: "Encontre todos os serviços disponibilizados pela prefeitura",
     };
 
     const sectionHeader = document.querySelector(".section-header");
