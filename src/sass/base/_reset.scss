@@ -46,6 +46,7 @@ ul {
 ol {
   list-style: none;
   counter-reset: custom-counter;
+  padding-left: 0;
 
   li {
     position: relative;

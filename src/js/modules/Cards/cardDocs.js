@@ -1,18 +1,25 @@
-/**
- * @param {{ name: string }[]} forms
- * @returns {string}
- */
-export function cardDocs(forms) {
+export function cardDocs({ titulo, formularios }) {
   return `
     <div class="detail-card">
-      <div class="detail-header"><div class="detail-title">Formulários Disponíveis</div></div>
+      <div class="detail-header">
+        <div class="detail-title">${titulo}</div>
+      </div>
       <div class="detail-content">
-        ${forms.map(form => `
-          <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-            <span class="text-gray-700">${form.name}</span>
-            <div class="flex space-x-2">
-              <button class="btn-download">Baixar</button>
-              <button class="btn-open">Abrir</button>
+        ${formularios.map(form => `
+          <div class="card-row">
+            <span>${form.nome}</span>
+            <div class="button-group-wrapper">
+              ${form.botoes.map(botao => `
+                <a 
+                  href="${botao.url}" 
+                  class="button-group"
+                  ${botao.download ? 'download' : ''}
+                  ${botao.novaAba ? 'target="_blank"' : ''}
+                >
+                  <i class="${botao.icon} icon"></i>
+                  ${botao.texto}
+                </a>
+              `).join("")}
             </div>
           </div>
         `).join("")}

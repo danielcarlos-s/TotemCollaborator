@@ -45,6 +45,7 @@ ul li::marker {
 ol {
   list-style: none;
   counter-reset: custom-counter;
+  padding-left: 0;
 }
 ol li {
   position: relative;

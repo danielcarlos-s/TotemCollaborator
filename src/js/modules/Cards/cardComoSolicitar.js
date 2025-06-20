@@ -1,7 +1,6 @@
 /**
  * @param {Object} card
  * @param {string} card.title
- * @param {string[]} card.steps
  * @returns {string}
  */
 export function cardComoSolicitar({ title, items }) {
